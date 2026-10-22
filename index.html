@@ -117,12 +117,15 @@ footer{padding:30px 0;color:var(--sub);font-size:13px;border-top:1px solid var(-
 .was{font-size:13px;color:var(--sub);text-decoration:line-through;margin-top:6px}.price .half{color:var(--red)}
 .custom{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}.custom .pt{background:#fff;border:1px solid var(--line);padding:18px 20px;margin-bottom:12px}.custom .pt b{display:block;font-size:16px;margin-bottom:4px}.custom .pt p{margin:0;font-size:14px;color:#3d372f}
 .custom .big{font-size:17px}.custom .badge{display:inline-block;border:1.5px solid var(--red);color:var(--red);font-weight:700;font-size:13px;padding:4px 10px;margin-top:6px}
+.secu{display:grid;grid-template-columns:1fr 1fr;gap:14px}.secu .pt{background:#fff;border:1px solid var(--line);padding:18px 20px}.secu .pt b{display:block;font-size:16px;margin-bottom:6px;word-break:auto-phrase}.secu .pt p{margin:0;font-size:14px;color:#3d372f}
+.secu-lead{font-size:16px;margin:0 0 20px}.secu-note{margin:18px 0 0;font-size:14px;color:#3d372f;border-left:3px solid var(--red);padding:4px 0 4px 12px}
+@media(max-width:760px){.secu{grid-template-columns:1fr}}
 @media(max-width:760px){.custom{grid-template-columns:1fr;gap:16px}.campaign b{font-size:16px}}
 .freewk{background:#fff;border:2px solid var(--red);padding:14px 16px;margin:14px 0 10px}.freewk b{display:block;color:var(--red);font-size:16px}.freewk span{font-size:13px;color:#3d372f}
 </style></head><body>
 <div class="wrap">
 <nav><a class="logo" href="#"><img src="img/fastkarte-logo.svg" alt="ファストカルテ"></a>
-<ul><li><a href="#kufu">現場の工夫</a></li><li><a href="#case">導入実績</a></li><li><a href="#partial">部分導入</a></li><li><a href="#custom">院に合わせて</a></li><li><a href="#price">料金</a></li><li><a href="#maker">つくり手</a></li></ul>
+<ul><li><a href="#kufu">現場の工夫</a></li><li><a href="#case">導入実績</a></li><li><a href="#partial">部分導入</a></li><li><a href="#custom">院に合わせて</a></li><li><a href="#security">セキュリティ</a></li><li><a href="#price">料金</a></li><li><a href="#maker">つくり手</a></li></ul>
 <a class="btn sm" href="#contact">相談する</a></nav>
 
 <section class="hero">
@@ -194,6 +197,22 @@ footer{padding:30px 0;color:var(--sub);font-size:13px;border-top:1px solid var(-
  </div>
 </section>
 
+<section class="sec" id="security">
+ <h2><small>SECURITY</small>患者さんの<br>情報を守る</h2>
+ <div>
+  <p class="secu-lead">カルテには、顔写真や施術の記録など、外に出てはならない情報が集まります。自院で毎日使うカルテだからこそ、守りの仕組みも現場の運用に合わせて組み込んでいます。</p>
+  <div class="secu">
+   <div class="pt"><b>国内のクラウドに、暗号化して通信</b><p>カルテのデータは国内（東京）のデータセンターに置きます。端末とのやりとりは、すべて暗号化した通信（HTTPS）です。</p></div>
+   <div class="pt"><b>スタッフごとのアカウントと権限</b><p>医師・看護師・受付など、職種や業務ごとに見られる範囲と操作を分けます。退職したスタッフのアカウントは、その場で止められます。</p></div>
+   <div class="pt"><b>なりすましログインを防ぐ</b><p>英字と数字を混ぜたパスワード、続けて5回まちがえると一定時間ロック、操作がないと自動でログアウト。認証アプリによる二段階認証も、院の方針で全員・院外からだけなどを選べます。</p></div>
+   <div class="pt"><b>登録した端末だけで使う</b><p>院の端末を登録して使います。院の外から使うときは、申請と許可が必要です。</p></div>
+   <div class="pt"><b>書き換えても、元の記録は消えない</b><p>カルテを直す前の内容は履歴として残り、誰がいつ何をしたかの操作記録も、あとから書き換えられない形で保存します。患者さんを一覧から外しても、診療の記録は残ります。</p></div>
+   <div class="pt"><b>写真・同意書は非公開の保管庫に</b><p>施術写真や署名した同意書は、ログインしたスタッフだけが見られる場所に保管します。待合の呼び出し音声には、患者さんの名前を使いません。</p></div>
+  </div>
+  <p class="secu-note">厚生労働省「医療情報システムの安全管理に関するガイドライン」に沿って、安全管理の説明資料を整えています。ご検討の際は、いまの対応状況をそのままお見せします。</p>
+ </div>
+</section>
+
 <section class="sec" id="custom">
  <h2><small>CUSTOM</small>院のスタッフに<br>合わせて直す</h2>
  <div class="custom">
@@ -233,7 +252,7 @@ footer{padding:30px 0;color:var(--sub);font-size:13px;border-top:1px solid var(-
   <details><summary>いまのカルテからデータを移せますか？</summary><p>患者情報・予約・来院履歴は移せます。データ移行は50,000円からで、元のデータの形式を見て見積もります。</p></details>
   <details><summary>導入費には何が含まれますか？</summary><p>メニューと料金の登録、同意書・問診の取り込み、端末の設定、スタッフへの操作説明です。使い始めの1週間に出たご要望に合わせたカスタマイズも、無料で含まれます。</p></details>
   <details><summary>いまのカルテを使い続けたまま、番号札だけ入れられますか？</summary><p>できます。いまのカルテや予約システムはそのままに、番号札・呼び出し・待合モニターだけを導入する方法をご提案します。つなぎ方は院の環境を見て決めます。</p></details>
-    <details><summary>データはどこに保存されますか？</summary><p>国内（東京）のクラウドに保存し、毎日バックアップを取ります。</p></details>
+    <details><summary>データはどこに保存されますか？</summary><p>国内（東京）のクラウドに保存します。バックアップの取り方と保存先は、導入時に院ごとに設定します。</p></details>
  </div>
 </section>
 
