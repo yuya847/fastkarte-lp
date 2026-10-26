@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="../img/logo.svg" type="image/svg+xml">
+<title>患者アンケートと口コミ案内｜ファストカルテ</title>
+<link rel="canonical" href="https://fastkarte.com/kuchikomi/">
+<meta property="og:type" content="website"><meta property="og:url" content="https://fastkarte.com/kuchikomi/"><meta property="og:title" content="患者アンケートと口コミ案内｜ファストカルテ"><meta property="og:description" content="院内のQRコードから1分のアンケート。患者さんの声を院の改善に活かし、口コミを書いてくださる方の手間を減らします。美容クリニックの現場で使っている仕組みです。"><meta property="og:site_name" content="ファストカルテ">
+<meta name="description" content="院内のQRコードから1分のアンケート。患者さんの声を院の改善に活かし、口コミを書いてくださる方の手間を減らします。美容クリニックの現場で使っている仕組みです。">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f4efe6;--paper2:#ebe4d7;--ink:#1d1a16;--sub:#6e665a;--line:#d8cfbf;--red:#b8321f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans JP",sans-serif;line-height:1.85;word-break:auto-phrase}
+.wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+a{color:inherit}
+nav{display:flex;justify-content:space-between;align-items:center;padding:26px 0;font-size:14px}
+.logo{font-weight:600;font-size:22px;color:rgb(43,39,36);text-decoration:none;display:inline-flex;align-items:center;gap:10px;white-space:nowrap}.logo img{height:34px;width:auto;display:block}
+nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0;color:var(--sub)}nav ul a{text-decoration:none}
+.btn{display:inline-block;padding:12px 24px;font-weight:700;text-decoration:none;border:1.5px solid var(--ink);white-space:nowrap}
+.btn.solid{background:var(--ink);color:var(--paper)}.btn.sm{padding:9px 18px}
+
+.hero{display:grid;grid-template-columns:1fr 300px;gap:60px;padding:40px 0 70px;align-items:center}
+.eyebrow{color:var(--red);font-weight:700;letter-spacing:.2em;font-size:13px}
+h1{font-family:"Shippori Mincho B1",serif;font-size:52px;line-height:1.4;font-weight:800;margin:14px 0 24px}
+.lead{font-size:17px;color:#3d372f;max-width:31em;margin:0}
+.btns{display:flex;gap:16px;margin-top:30px;flex-wrap:wrap}
+.facts{display:flex;gap:26px;margin-top:28px;font-size:13px;color:var(--sub);flex-wrap:wrap}
+.facts b{color:var(--ink);font-family:"Shippori Mincho B1",serif;font-size:20px;margin-right:4px}
+.phone{background:#1d1a16;border-radius:34px;padding:12px;box-shadow:0 30px 60px -30px rgba(29,26,22,.5)}
+.phone img{display:block;width:100%;height:auto;border-radius:24px}
+.phone-cap{font-size:12px;color:var(--sub);text-align:center;margin-top:10px}
+
+.sec{display:grid;grid-template-columns:240px 1fr;gap:50px;padding:76px 0;border-bottom:1px solid var(--line)}
+.sec h2{font-family:"Shippori Mincho B1",serif;font-size:30px;line-height:1.5;margin:0}
+h2 small{display:block;font-family:"Noto Sans JP";font-size:12px;color:var(--red);letter-spacing:.2em}
+.intro{font-size:16px;color:#3d372f;margin:0 0 30px}
+
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.flow figure{margin:0}.flow img{width:100%;height:auto;display:block;border-radius:12px;border:1px solid var(--line);background:#fff;box-shadow:0 18px 40px -24px rgba(29,26,22,.35)}
+.flow figcaption{font-size:14px;color:#3d372f;margin-top:10px;line-height:1.7}.flow figcaption b{display:block;font-family:"Shippori Mincho B1",serif;font-size:17px;color:var(--ink)}
+.flow .n{color:var(--red);font-family:"Shippori Mincho B1",serif;font-weight:800;margin-right:6px}
+.demo{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:30px;background:#fff;border:1px solid var(--line);padding:16px 20px}.demo p{margin:0;font-size:14px;color:#3d372f;flex:1;min-width:14em}
+
+.kufu{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--ink)}
+.k{padding:26px 26px 26px 0;border-bottom:1px solid var(--line)}
+.k:nth-child(odd){border-right:1px solid var(--line)}.k:nth-child(even){padding-left:26px;padding-right:0}
+.k .where{font-size:12px;color:var(--red);font-weight:700;letter-spacing:.1em}
+.k h3{font-family:"Shippori Mincho B1",serif;font-size:21px;margin:4px 0 10px;line-height:1.5}
+.k p{margin:0;font-size:15px}
+
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.feat h3{font-family:"Shippori Mincho B1",serif;font-size:19px;margin:0 0 8px;padding-bottom:8px;border-bottom:1px solid var(--ink)}
+.feat ul{margin:0;padding-left:1.1em;font-size:14px;color:#3d372f}.feat li{margin:3px 0}
+.soon{display:inline-block;font-size:11px;color:var(--red);border:1px solid var(--red);padding:0 6px;margin-left:4px;line-height:1.6;vertical-align:1px}
+
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:14px}.rules .pt{background:#fff;border:1px solid var(--line);padding:18px 20px}.rules .pt b{display:block;font-size:16px;margin-bottom:6px}.rules .pt p{margin:0;font-size:14px;color:#3d372f}
+.note-red{margin:18px 0 0;font-size:14px;color:#3d372f;border-left:3px solid var(--red);padding:4px 0 4px 12px}
+
+#price{grid-template-columns:1fr;gap:24px}
+.plans{display:grid;grid-template-columns:1fr;border:1px solid var(--ink)}
+.plan{padding:26px 24px;border-right:1px solid var(--line);display:flex;flex-direction:column;background:var(--paper)}
+.plan:last-child{border:0}.plan.main{background:#fff;outline:2px solid var(--red);outline-offset:-2px}
+.plan .tag{font-size:11px;color:var(--red);font-weight:700;letter-spacing:.1em}
+.plan h3{font-family:"Shippori Mincho B1",serif;font-size:21px;margin:2px 0}
+.price{font-family:"Shippori Mincho B1",serif;font-size:36px;font-weight:800;line-height:1.2;margin-top:6px}.price small{font-size:13px;font-family:"Noto Sans JP";font-weight:500;color:var(--sub)}
+.plan ul{padding-left:1.1em;font-size:14px;margin:12px 0;color:#3d372f;flex:1}
+.plan .init{font-size:13px;color:var(--sub);border-top:1px dashed var(--line);padding-top:8px}
+.opt{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline;background:#fff;border:1px solid var(--line);padding:14px 20px;margin-top:14px}.opt b{font-size:16px}.opt span{font-size:14px;color:#3d372f}
+.terms{font-size:13px;color:var(--sub);margin-top:16px}
+
+.faq details{border-bottom:1px solid var(--line);padding:16px 0}.faq details:first-child{border-top:1px solid var(--ink)}
+.faq summary{font-weight:700;cursor:pointer;list-style:none}.faq summary::-webkit-details-marker{display:none}.faq summary:before{content:"問　";color:var(--red);font-family:"Shippori Mincho B1",serif}
+.faq p{margin:8px 0 0;color:#3d372f;font-size:15px}
+.final{text-align:center;padding:90px 0}
+.final h2{font-family:"Shippori Mincho B1",serif;font-size:36px;margin:0 0 14px;line-height:1.5}
+.final p{color:var(--sub);margin:0 0 28px}
+footer{padding:30px 0;color:var(--sub);font-size:13px;border-top:1px solid var(--line)}
+
+@media(max-width:900px){.flow{grid-template-columns:1fr 1fr}.feat{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){
+ .wrap{padding:0 16px}nav ul{display:none}.logo{font-size:18px;gap:8px}
+ .hero{grid-template-columns:1fr;gap:34px;padding:10px 0 48px}.hero .shot{max-width:260px;margin:0 auto}
+ h1{font-size:30px}.lead{font-size:15px}.facts{gap:10px 20px}
+ .sec{grid-template-columns:1fr;gap:20px;padding:48px 0}
+ .flow{grid-template-columns:1fr 1fr;gap:16px}.flow figcaption{font-size:13px}.flow figcaption b{font-size:15px}
+ .kufu{grid-template-columns:1fr}.k,.k:nth-child(even){padding:22px 0;border-right:0}
+ .feat{grid-template-columns:1fr}.rules{grid-template-columns:1fr}
+ .plans{grid-template-columns:1fr}.plan{border-right:0}.plan ul{columns:1!important}
+ .final h2{font-size:22px}
+}
+</style></head><body>
+<div class="wrap">
+<nav><a class="logo" href="../"><img src="../img/fastkarte-logo.svg" alt="ファストカルテ"></a>
+<ul><li><a href="#flow">患者さんの画面</a></li><li><a href="#kufu">院の使い方</a></li><li><a href="#rules">守っていること</a></li><li><a href="#price">料金</a></li><li><a href="#faq">よくある質問</a></li></ul>
+<a class="btn sm" href="#contact">相談する</a></nav>
+
+<section class="hero">
+ <div class="copy">
+  <div class="eyebrow">クリニック向け 患者アンケートと口コミ案内</div>
+  <h1>患者さんの声を、<br>院の改善と口コミに。</h1>
+  <p class="lead">院内のQRコードから、スマホで約1分のアンケート。届いた声はすぐ院長のメールへ届き、改善に使えます。口コミを書いてくださる患者さんには、回答をもとにした文章の下書きと、Googleの画面までの手順をお渡しします。</p>
+  <div class="btns"><a class="btn solid" href="#contact">導入の相談をする</a><a class="btn" href="https://kuchikomi-145793102692.asia-northeast1.run.app/r/demo" target="_blank" rel="noopener">デモを試す</a></div>
+  <div class="facts"><span><b>約1分</b>ほぼタップだけ</span><span><b>5</b>つの質問</span><span><b>即時</b>メールで届く</span></div>
+ </div>
+ <div class="shot"><div class="phone"><img src="img/q-rating.jpg" alt="アンケートの最初の画面" width="540" height="1020"></div><p class="phone-cap">デモ画面（架空のクリニック）</p></div>
+</section>
+</div>
+
+<div class="wrap">
+<section class="sec" id="flow">
+ <h2><small>FLOW</small>患者さんの<br>画面</h2>
+ <div>
+  <p class="intro">受付や待合に置いたQRコードを、患者さんが自分のスマホで読み取ります。アプリのインストールも会員登録も要りません。</p>
+  <div class="flow">
+   <figure><img src="img/q-rating.jpg" alt="満足度の質問" width="540" height="1020" loading="lazy"><figcaption><b><span class="n">1</span>満足度</b>5段階からタップで選びます。上部に進み具合と残りの秒数が出ます。</figcaption></figure>
+   <figure><img src="img/q-treatment.jpg" alt="受けた施術の質問" width="540" height="902" loading="lazy"><figcaption><b><span class="n">2</span>受けた施術</b>院のメニューに合わせた選択肢。複数選べて、その他は自由に入力できます。</figcaption></figure>
+   <figure><img src="img/q-improve.jpg" alt="改善してほしい点の質問" width="540" height="906" loading="lazy"><figcaption><b><span class="n">3</span>改善してほしい点</b>任意の質問です。よく出る声はタップで選べて、自由に書くこともできます。</figcaption></figure>
+   <figure><img src="img/q-draft.jpg" alt="口コミの下書きとGoogleへの手順" width="540" height="763" loading="lazy"><figcaption><b><span class="n">4</span>口コミの下書き</b>書いてくださる方には、回答をもとにした文章を用意。患者さんが確認・書き換えて、ご自身で投稿します。</figcaption></figure>
+  </div>
+  <div class="demo"><p>実際に回答できるデモがあります。回答は保存されず、どこにも送られません。</p><a class="btn" href="https://kuchikomi-145793102692.asia-northeast1.run.app/r/demo" target="_blank" rel="noopener">デモを試す</a></div>
+ </div>
+</section>
+
+<section class="sec" id="kufu">
+ <h2><small>USE</small>院での<br>使い方</h2>
+ <div>
+  <p class="intro">しんゆり美容健康クリニックの本院・府中院で、毎日使っている仕組みです。</p>
+  <div class="kufu">
+   <div class="k"><div class="where">改善に使う</div><h3>回答はすぐ院長のメールへ</h3><p>回答が届くたびに、満足度・受けた施術・良かった点・改善してほしい点をメールでお知らせします。「待ち時間が長い」「説明が足りない」といった声に、その日のうちに手を打てます。</p></div>
+   <div class="k"><div class="where">口コミの手間を減らす</div><h3>何を書けばいいか迷わせない</h3><p>「口コミを書きたいけれど、何を書けばいいか分からない」という患者さんに、回答をもとにした下書きをお渡しします。そのまま使うか、自分で書くかは患者さんが選びます。</p></div>
+   <div class="k"><div class="where">施術が伝わる</div><h3>施術名の入った、具体的な口コミに</h3><p>下書きには、患者さんが選んだ施術の名前が入ります。「ハイフを受けました」のような具体的な口コミは、これから来院を考える方にとって参考になり、地図検索やAIの検索で院が見つかる手がかりにもなります。</p></div>
+   <div class="k"><div class="where">医療広告への配慮</div><h3>効果を言い切る文章は作らない</h3><p>下書きは来院の体験（受付の対応、説明の分かりやすさなど）を中心にし、「必ず効く」「痛みゼロ」のような効果の断定や誇大な表現は入れません。</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="feature">
+ <h2><small>FEATURES</small>できること</h2>
+ <div class="feat">
+  <div><h3>アンケート</h3><ul><li>院のメニューに合わせた質問</li><li>進み具合と残り時間の表示</li><li>院の色に合わせた画面</li><li>QRコードと院内掲示の印刷</li></ul></div>
+  <div><h3>口コミの案内</h3><ul><li>回答をもとにした文章の下書き</li><li>ワンタップでコピー</li><li>Googleの口コミ画面まで3ステップの案内</li></ul></div>
+  <div><h3>院の管理画面</h3><ul><li>回答の一覧と即時のメール通知</li><li>改善要望の集計</li><li>Googleの口コミ件数・評価の推移</li><li>届いた口コミへの返信文の下書き<span class="soon">オプション</span></li></ul></div>
+ </div>
+</section>
+
+<section class="sec" id="rules">
+ <h2><small>RULES</small>守って<br>いること</h2>
+ <div>
+  <p class="intro">口コミには、Googleの口コミのルールや、ステルスマーケティング規制（景品表示法）、医療広告ガイドラインが関わります。仕組みも案内も、これらに沿うように作っています。</p>
+  <div class="rules">
+   <div class="pt"><b>投稿するのは、患者さんご本人</b><p>下書きはあくまで手助けです。内容の確認・書き換え・投稿は患者さんが行い、院が代わりに投稿することはありません。</p></div>
+   <div class="pt"><b>謝礼と引き換えにしない</b><p>口コミと引き換えの割引やプレゼントは、ステマ規制やGoogleのルールに触れるおそれがあります。導入時に、院内での声かけの仕方もお伝えします。</p></div>
+   <div class="pt"><b>良い声も、厳しい声も院長へ</b><p>改善してほしい点も含めて、すべての回答がそのまま院長に届きます。下書きも良い点だけを並べず、気になった点があれば穏やかな言葉で1文添えます。</p></div>
+   <div class="pt"><b>回答の情報は院のものとして管理</b><p>回答は国内（東京）のクラウドに保存し、暗号化した通信でやりとりします。管理画面は院のスタッフだけがログインして使います。</p></div>
+  </div>
+  <p class="note-red">この仕組みは、口コミの件数や評価が上がることを約束するものではありません。患者さんの声を集めて院の改善に活かし、書いてくださる方の手間を減らすための道具です。</p>
+ </div>
+</section>
+
+<section class="sec" id="price">
+ <h2><small>PRICE</small>料金</h2>
+ <div>
+  <div class="plans">
+   <div class="plan main"><div class="tag">いまのカルテのまま使えます</div><h3>月額プラン</h3><div class="price">3,980<small>円/月</small></div><ul style="columns:2;column-gap:32px"><li>アンケート（院のメニューに合わせて設定）</li><li>口コミの下書きと案内</li><li>回答のメール通知・管理画面</li><li>QRコード・院内掲示の印刷データ</li></ul><div class="init">導入費 19,800円</div></div>
+  </div>
+  <div class="opt"><b>オプション：口コミへの返信文の下書き</b><span>＋2,000円/月　Googleに届いた口コミへの返信文を下書きし、院が確認してから投稿します（11月中の提供開始を予定）。</span></div>
+  <p class="terms">表示は1院あたり・税抜。最低契約3か月、その後は1か月単位で解約できます。2院目からは月額半額。導入費には、質問と選択肢の設定、院の色の反映、QRコードと院内掲示の用意、Googleの口コミ画面の設定が含まれます。</p>
+ </div>
+</section>
+
+<section class="sec" id="faq">
+ <h2><small>FAQ</small>よくある<br>質問</h2>
+ <div class="faq">
+  <details open><summary>いまの電子カルテや予約システムはそのままで使えますか？</summary><p>使えます。カルテや予約システムとはつながずに動くので、いまの受付の流れを変えずに導入できます。</p></details>
+  <details><summary>質問の内容は変えられますか？</summary><p>受けた施術の選択肢は、院のメニューに合わせて設定します。質問の数は、患者さんが1分ほどで答えられる範囲をおすすめしています。</p></details>
+  <details><summary>回答はどこに届きますか？</summary><p>院長や院のメールアドレスに、回答ごとにお知らせします。過去の回答は管理画面でいつでも見られます。</p></details>
+  <details><summary>口コミの文章は誰が書くのですか？</summary><p>患者さんご本人です。仕組みが用意するのは、回答をもとにした下書きまでです。患者さんは内容を確認し、必要に応じて書き換えてから、ご自身のGoogleアカウントで投稿します。下書きを使わずに自分で書くこともできます。</p></details>
+  <details><summary>Google以外の口コミサイトにも使えますか？</summary><p>いまはGoogleの口コミに対応しています。ほかのサイトはご相談ください。</p></details>
+ </div>
+</section>
+
+<section class="final" id="contact">
+ <h2>まずはデモを、<br>ご自身のスマホで。</h2>
+ <p>院のメニューに合わせた画面を、お打ち合わせでお見せします。</p>
+ <div class="btns" style="justify-content:center"><a class="btn solid" href="mailto:info@suzuki-medical-engineering.work?subject=%E3%82%A2%E3%83%B3%E3%82%B1%E3%83%BC%E3%83%88%E3%81%A8%E5%8F%A3%E3%82%B3%E3%83%9F%E6%A1%88%E5%86%85%E3%81%AE%E7%9B%B8%E8%AB%87">導入の相談をする</a><a class="btn" href="https://kuchikomi-145793102692.asia-northeast1.run.app/r/demo" target="_blank" rel="noopener">デモを試す</a></div>
+</section>
+</div>
+<footer><div class="wrap"><img src="../img/logo.svg" alt="" width="18" height="18" style="vertical-align:-3px;margin-right:6px">合同会社鈴木医工（Suzuki Medical Engineering LLC）　© 2026 ファストカルテ<div style="margin-top:8px;font-size:12px"><a href="../" style="color:inherit;margin-right:14px">ファストカルテ（電子カルテ）</a><a href="../terms.html" style="color:inherit;margin-right:14px">利用規約</a><a href="../privacy.html" style="color:inherit">個人情報の取扱い</a></div></div></footer>
+</body></html>
