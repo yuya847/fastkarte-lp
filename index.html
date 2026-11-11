@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" href="img/logo.svg" type="image/svg+xml">
-<title>ファストカルテ｜現場で鍛えた美容クリニックの電子カルテ</title>
+<title>ファストカルテ｜美容・自由診療クリニックのクラウド電子カルテ</title>
 <link rel="canonical" href="https://fastkarte.com/">
-<meta property="og:type" content="website"><meta property="og:url" content="https://fastkarte.com/"><meta property="og:title" content="ファストカルテ｜現場で鍛えた美容クリニックの電子カルテ"><meta property="og:description" content="机の上ではなく、受付と診察室で鍛えた電子カルテ。美容クリニックの現場で得た工夫を、そのまま機能にしています。"><meta property="og:site_name" content="ファストカルテ"><meta property="og:image" content="https://fastkarte.com/img/screen-reception.jpg"><meta property="og:image:width" content="1600"><meta property="og:image:height" content="1000"><meta name="twitter:card" content="summary_large_image">
-<meta name="description" content="机の上ではなく、受付と診察室で鍛えた電子カルテ。美容クリニックの現場で得た工夫を、そのまま機能にしています。">
+<meta property="og:type" content="website"><meta property="og:url" content="https://fastkarte.com/"><meta property="og:title" content="ファストカルテ｜美容・自由診療クリニックのクラウド電子カルテ"><meta property="og:description" content="美容・自由診療クリニック向けのクラウド電子カルテ。ホットペッパー・キレイパス・トリビューの予約の自動取り込み、番号札・呼び出し、電子同意書、会計・回数券までをひとつに。院長でもある医師が現場で作り、料金はすべて公開（月19,800円から）。保険診療への対応もご相談ください。"><meta property="og:locale" content="ja_JP"><meta property="og:site_name" content="ファストカルテ"><meta property="og:image" content="https://fastkarte.com/img/screen-reception.jpg"><meta property="og:image:width" content="1600"><meta property="og:image:height" content="1000"><meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="美容・自由診療クリニック向けのクラウド電子カルテ。ホットペッパー・キレイパス・トリビューの予約の自動取り込み、番号札・呼び出し、電子同意書、会計・回数券までをひとつに。院長でもある医師が現場で作り、料金はすべて公開（月19,800円から）。保険診療への対応もご相談ください。">
+<meta name="robots" content="index,follow,max-image-preview:large"><meta name="theme-color" content="#f4efe6"><link rel="alternate" type="text/plain" href="https://fastkarte.com/llms.txt" title="llms.txt">
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--paper:#f4efe6;--paper2:#ebe4d7;--ink:#1d1a16;--sub:#6e665a;--line:#d8cfbf;--red:#b8321f;
@@ -27,8 +28,8 @@ nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0;color:var(--sub)
 .kanji:after{content:"";position:absolute;width:74px;height:74px;border:3px solid var(--red);left:258px;top:216px;transform:rotate(4deg);border-radius:4px}
 .seal{position:absolute;left:270px;top:224px;color:var(--red);font-family:"Shippori Mincho B1",serif;font-weight:800;font-size:22px;line-height:1.05;writing-mode:vertical-rl;letter-spacing:.06em}
 .copy{padding-top:24px}
-.eyebrow{color:var(--red);font-weight:700;letter-spacing:.2em;font-size:13px}
-h1{font-family:"Shippori Mincho B1",serif;font-size:58px;line-height:1.35;font-weight:800;margin:14px 0 24px}
+.eyebrow{color:var(--red);font-weight:700;letter-spacing:.2em;font-size:13px}h1 .eyebrow{display:block;font-family:"Noto Sans JP",sans-serif;line-height:1.6;margin-bottom:14px}
+h1{font-family:"Shippori Mincho B1",serif;font-size:58px;line-height:1.35;font-weight:800;margin:0 0 24px}
 .lead{font-size:17px;color:#3d372f;max-width:32em;margin:0}
 .btns{display:flex;gap:16px;margin-top:30px;flex-wrap:wrap}
 .case{display:inline-flex;align-items:center;gap:10px;margin-top:22px;border:1px solid var(--ink);padding:8px 14px;font-size:14px;background:#fff}.case b{color:var(--red);font-size:12px;letter-spacing:.15em}
@@ -114,7 +115,7 @@ footer{padding:30px 0;color:var(--sub);font-size:13px;border-top:1px solid var(-
 }
 .logo,.btn.sm{white-space:nowrap}@media(max-width:760px){.logo{font-size:18px;gap:8px}.logo img{height:34px;width:auto;display:block}.logo small{display:none}}
 .campaign{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:var(--red);color:#fff;padding:14px 20px;margin-bottom:18px}.campaign b{font-size:18px}.campaign span{font-size:13px;opacity:.95}
-.was{font-size:13px;color:var(--sub);text-decoration:line-through;margin-top:6px}.price .half{color:var(--red)}
+.monp{font-size:13px;color:var(--red);font-weight:700;margin-top:2px}.monp b{font-size:15px}
 .custom{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}.custom .pt{background:#fff;border:1px solid var(--line);padding:18px 20px;margin-bottom:12px}.custom .pt b{display:block;font-size:16px;margin-bottom:4px}.custom .pt p{margin:0;font-size:14px;color:#3d372f}
 .custom .big{font-size:17px}.custom .badge{display:inline-block;border:1.5px solid var(--red);color:var(--red);font-weight:700;font-size:13px;padding:4px 10px;margin-top:6px}
 .secu{display:grid;grid-template-columns:1fr 1fr;gap:14px}.secu .pt{background:#fff;border:1px solid var(--line);padding:18px 20px}.secu .pt b{display:block;font-size:16px;margin-bottom:6px;word-break:auto-phrase}.secu .pt p{margin:0;font-size:14px;color:#3d372f}
@@ -140,11 +141,30 @@ footer{padding:30px 0;color:var(--sub);font-size:13px;border-top:1px solid var(-
 .final .ask-note{margin:8px 0 0;font-size:12px;color:var(--sub)}
 .ask-done{max-width:560px;margin:8px auto 0;background:#fff;border:2px solid var(--ink);padding:28px 24px}
 .final .ask-done p{color:#3d372f;margin:0 0 16px}
-.final .ask-alt{margin:22px 0 0;font-size:13px}.ask-alt .sel{user-select:all;font-weight:700;color:var(--ink);word-break:break-all}
+.final .ask-alt{margin:22px 0 0;font-size:13px}.ask-alt .sel{display:inline-block;font-weight:700;color:var(--ink);word-break:normal;padding:6px 0}
 @media(max-width:760px){.ask{padding:18px 16px 14px}}
 .final h2,.final p,.ask{word-break:auto-phrase}
+.hoken{margin:22px 0 0;background:#fff;border:1px solid var(--line);border-left:4px solid var(--red);padding:14px 18px;font-size:14px;color:#3d372f}.hoken b{display:block;font-size:16px;color:var(--ink);margin-bottom:2px}
+.custom .pt.onsite{border:2px solid var(--red)}.custom .pt.onsite b{color:var(--red)}
+.secu-note.top{margin:0 0 20px}
+.nw{display:inline-block}.freewk b,.pt b,.campaign b,.hoken b,.part h3,.k h3,.plan li,.faq summary{word-break:auto-phrase}.case{flex-wrap:wrap;gap:2px 10px}.case b{white-space:nowrap}
+.part .pi{margin:2px 0 0;font-size:12px;color:var(--sub)}
+.btn{transition:opacity .15s,transform .08s;-webkit-tap-highlight-color:transparent}.btn:active{transform:scale(.98);opacity:.8}
+.faq details{padding:0}.faq summary{padding:16px 32px 16px 0;position:relative;-webkit-tap-highlight-color:transparent}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"＋";position:absolute;right:4px;top:15px;color:var(--sub);font-weight:500}.faq details[open] summary:after{content:"−"}.faq summary:active{opacity:.6}.faq p{margin:0 0 16px}
+footer a{display:inline-block;padding:12px 0}
+@media(max-width:760px){
+ nav{position:sticky;top:0;background:var(--paper);z-index:10;padding:10px 0;margin:0 -16px;padding-left:16px;padding-right:16px;border-bottom:1px solid var(--line)}
+ .kanji{font-size:88px;height:100px}.kanji:after{left:76px;top:58px;width:34px;height:34px;border-width:2px}.seal{left:81px;top:62px;font-size:11px}
+ .k:nth-child(odd){border-right:0}
+ .sec h2 br{display:none}.sec{padding:36px 0}
+ .plan .tag,.part .lbl,.ask .req{font-size:12px}
+ .plan{padding:18px 16px}.plan ul{margin:8px 0}
+ html{scroll-padding-top:64px}
+}
 .freewk{background:#fff;border:2px solid var(--red);padding:14px 16px;margin:14px 0 10px}.freewk b{display:block;color:var(--red);font-size:16px}.freewk span{font-size:13px;color:#3d372f}
-</style></head><body>
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://fastkarte.com/#org","name":"合同会社鈴木医工","alternateName":"Suzuki Medical Engineering LLC","url":"https://suzuki-medical-engineering.work/","logo":"https://fastkarte.com/img/logo.svg","email":"info@suzuki-medical-engineering.work","taxID":"5040003029730","address":{"@type":"PostalAddress","addressRegion":"千葉県","addressLocality":"松戸市","addressCountry":"JP"},"founder":{"@id":"https://fastkarte.com/#founder"}},{"@type":"Person","@id":"https://fastkarte.com/#founder","name":"鈴木 雄哉","jobTitle":"医師／合同会社鈴木医工 代表","worksFor":{"@id":"https://fastkarte.com/#org"}},{"@type":"WebSite","@id":"https://fastkarte.com/#site","url":"https://fastkarte.com/","name":"ファストカルテ","inLanguage":"ja","publisher":{"@id":"https://fastkarte.com/#org"}},{"@type":"SoftwareApplication","@id":"https://fastkarte.com/#app","name":"ファストカルテ","alternateName":"FastKarte","applicationCategory":"BusinessApplication","applicationSubCategory":"電子カルテ","operatingSystem":"Web（ブラウザ）、iPad、iPhone","url":"https://fastkarte.com/","inLanguage":"ja","description":"美容・自由診療クリニック向けのクラウド電子カルテ。予約サイト（ホットペッパー・キレイパス・トリビュー）の自動取り込み、番号札・呼び出し・待合モニター、電子同意書・Web問診、会計・回数券の管理をひとつにまとめる。院長でもある医師が開発し、自院（しんゆり美容健康クリニック 本院・府中院）で毎日使っている。保険診療への対応は相談に応じる。","featureList":["予約台帳・24時間Web予約","ホットペッパー・キレイパス・トリビューの予約の自動取り込み","番号札・呼び出し・待合モニター","電子カルテ（シェーマ・写真・前回コピー）","電子同意書・Web問診","見積書・契約書（特商法対応）","会計・回数券の消化管理","経営ダッシュボード"],"screenshot":"https://fastkarte.com/img/screen-reception.jpg","publisher":{"@id":"https://fastkarte.com/#org"},"author":{"@id":"https://fastkarte.com/#founder"},"offers":[{"@type":"Offer","name":"ライト","price":"19800","priceCurrency":"JPY","description":"電子カルテ・予約台帳、会計・回数券、電子同意書（月額・1院あたり・税抜）","priceSpecification":{"@type":"UnitPriceSpecification","price":19800,"priceCurrency":"JPY","unitText":"月","valueAddedTaxIncluded":false}},{"@type":"Offer","name":"スタンダード","price":"39800","priceCurrency":"JPY","description":"ライトの全機能＋予約サイトの自動取り込み、Web予約・LINE・呼び出し、診察券・Web問診（月額・1院あたり・税抜）","priceSpecification":{"@type":"UnitPriceSpecification","price":39800,"priceCurrency":"JPY","unitText":"月","valueAddedTaxIncluded":false}},{"@type":"Offer","name":"ホームページ付き","price":"54800","priceCurrency":"JPY","description":"スタンダードの全機能＋クリニックのHP（月額・1院あたり・税抜）","priceSpecification":{"@type":"UnitPriceSpecification","price":54800,"priceCurrency":"JPY","unitText":"月","valueAddedTaxIncluded":false}},{"@type":"Offer","name":"経営プラス","price":"79800","priceCurrency":"JPY","description":"HP付きの全機能＋経営ダッシュボード、会計ソフト向けの出力、継続カスタマイズ（月3時間まで）（月額・1院あたり・税抜）","priceSpecification":{"@type":"UnitPriceSpecification","price":79800,"priceCurrency":"JPY","unitText":"月","valueAddedTaxIncluded":false}}]},{"@type":"FAQPage","@id":"https://fastkarte.com/#faq","mainEntity":[{"@type":"Question","name":"保険診療にも使えますか？","acceptedAnswer":{"@type":"Answer","text":"いまは美容・自由診療の院向けが中心ですが、保険診療への対応もご相談ください。院の診療の内容をうかがって、対応できる範囲をご説明します。"}},{"@type":"Question","name":"開発者に院へ来てもらうことはできますか？","acceptedAnswer":{"@type":"Answer","text":"できます。代表の医師が院に勤務し、現場で責任を持って、その院に合ったカルテを作ることもできます。勤務の日数や内容は、ご相談のうえで決めます。"}},{"@type":"Question","name":"いまのカルテからデータを移せますか？","acceptedAnswer":{"@type":"Answer","text":"患者情報・予約・来院履歴は移せます。データ移行は50,000円からで、元のデータの形式を見て見積もります。"}},{"@type":"Question","name":"導入費には何が含まれますか？","acceptedAnswer":{"@type":"Answer","text":"メニューと料金の登録、同意書・問診の取り込み、端末の設定、スタッフへの操作説明です。使い始めの1週間に出たご要望に合わせたカスタマイズも、無料で含まれます。"}},{"@type":"Question","name":"いまのカルテを使い続けたまま、番号札だけ入れられますか？","acceptedAnswer":{"@type":"Answer","text":"できます。いまのカルテや予約システムはそのままに、番号札・呼び出し・待合モニターだけを導入する方法をご提案します。つなぎ方は院の環境を見て決めます。"}},{"@type":"Question","name":"データはどこに保存されますか？","acceptedAnswer":{"@type":"Answer","text":"国内（東京）のクラウドに保存します。バックアップの取り方と保存先は、導入時に院ごとに設定します。"}}]}]}</script>
+</head><body>
 <div class="wrap">
 <nav><a class="logo" href="#"><img src="img/fastkarte-logo.svg" alt="ファストカルテ"></a>
 <ul><li><a href="#kufu">現場の工夫</a></li><li><a href="#case">導入実績</a></li><li><a href="#partial">部分導入</a></li><li><a href="#custom">院に合わせて</a></li><li><a href="#security">セキュリティ</a></li><li><a href="#price">料金</a></li><li><a href="#maker">つくり手</a></li></ul>
@@ -153,29 +173,28 @@ footer{padding:30px 0;color:var(--sub);font-size:13px;border-top:1px solid var(-
 <section class="hero">
  <div class="kanji">鍛<span class="seal">現場<br>仕込</span></div>
  <div class="copy">
-  <div class="eyebrow">美容・自由診療クリニックの電子カルテ</div>
-  <h1>机の上ではなく、<br>現場で鍛えたカルテ。</h1>
+  <h1><span class="eyebrow"><span class="nw">ファストカルテ</span> <span class="nw">美容・自由診療クリニックの電子カルテ</span></span>机の上ではなく、<br>現場で鍛えたカルテ。</h1>
   <p class="lead">朝の受付、混み合う午後、閉院後の締め。スタッフの手が止まったところを、院長でもある医師がその場で見て、直してきました。ファストカルテは、そうして現場で生まれた工夫を詰め込んだ電子カルテです。</p>
   <div class="btns"><a class="btn solid" href="#contact">導入の相談をする</a><a class="btn" href="#price">料金を見る</a></div>
-  <div class="case"><b>導入実績</b>しんゆり美容健康クリニック 本院・府中院</div>
+  <div class="case"><b>導入実績</b><span><span class="nw">しんゆり美容健康クリニック</span> <span class="nw">本院・府中院</span></span></div>
   <div class="facts"><span><b>3</b>つの予約サイトを自動で取り込み</span><span><b>東京</b>のクラウドに保存</span><span><b>医師</b>が開発・運用</span></div>
  </div>
 </section>
 </div>
 
 <section class="screen"><div class="wrap">
- <div class="cap"><h2><small>SCREEN</small>実際の画面</h2><span class="note">練習用の院の画面です。患者はすべて架空です。</span></div>
- <figure class="shotmain"><img src="img/screen-reception.jpg" alt="受付の画面" width="1600" height="1000" loading="lazy"><figcaption><b>受付</b>　予約サイトごとの色、番号札、状態の切り替え、呼び出しを1つの画面で。Alt＋数字で患者を選び、数字キーで状態を変えます。</figcaption></figure>
+ <div class="cap"><h2><small aria-hidden="true">SCREEN</small>実際の画面</h2><span class="note">練習用の院の画面です。患者はすべて架空です。</span></div>
+ <figure class="shotmain"><picture><source media="(max-width:760px)" srcset="img/screen-reception-sp.jpg" width="760" height="485"><img src="img/screen-reception.jpg" alt="ファストカルテの受付画面。番号札、状態（会計待ち・施術中・診察中・待合室）の切り替え、呼び出しボタン、予約サイトごとの表示が並ぶ" width="1600" height="1000" loading="lazy"></picture><figcaption><b>受付</b>　予約サイトごとの色、番号札、状態の切り替え、呼び出しを1つの画面で。Alt＋数字で患者を選び、数字キーで状態を変えます。</figcaption></figure>
  <div class="shots3">
-  <figure class="wide"><img src="img/screen-chart.jpg" alt="カルテの画面" width="1600" height="632" loading="lazy"><figcaption><b>カルテ</b>　右のアイコンからオーダー。予約どおりの施術はボタン1つで入ります。</figcaption></figure>
-  <figure><img src="img/screen-schedule.jpg" alt="予定の画面" width="1070" height="1180" loading="lazy"><figcaption><b>予定</b>　どの予約サイトからの予約か、いまどの状態かが一目で分かります。</figcaption></figure>
-  <figure><img src="img/screen-board.jpg" alt="待合のモニター" width="1200" height="971" loading="lazy"><figcaption><b>待合のモニター</b>　番号でお呼びし、名前は出しません。音声でも案内します。</figcaption></figure>
+  <figure class="wide"><img src="img/screen-chart.jpg" alt="ファストカルテのカルテ画面。右のアイコンからオーダーを入れる" width="1600" height="632" loading="lazy"><figcaption><b>カルテ</b>　右のアイコンからオーダー。予約どおりの施術はボタン1つで入ります。</figcaption></figure>
+  <figure><img src="img/screen-schedule.jpg" alt="ファストカルテの予定画面。予約サイトと状態が色で分かる" width="1070" height="1180" loading="lazy"><figcaption><b>予定</b>　どの予約サイトからの予約か、いまどの状態かが一目で分かります。</figcaption></figure>
+  <figure><img src="img/screen-board.jpg" alt="待合のモニター。番号と部屋を表示し、名前は出さない" width="1200" height="971" loading="lazy"><figcaption><b>待合のモニター</b>　番号でお呼びし、名前は出しません。音声でも案内します。</figcaption></figure>
  </div>
 </div></section>
 
 <div class="wrap">
 <section class="sec" id="kufu">
- <h2><small>KUFU</small>現場で得た<br>工夫</h2>
+ <h2><small aria-hidden="true">KUFU</small>現場で得た<br>工夫</h2>
  <div>
   <p class="intro">どれも、実際の院で困ったことがきっかけで入れた機能です。</p>
   <div class="kufu">
@@ -190,39 +209,41 @@ footer{padding:30px 0;color:var(--sub);font-size:13px;border-top:1px solid var(-
 </section>
 
 <section class="sec" id="case">
- <h2><small>CASE</small>導入実績</h2>
+ <h2><small aria-hidden="true">CASE</small>導入実績</h2>
  <div class="doc case-doc"><figure class="shot"><img src="img/fuchu-reception.jpg" alt="府中院の受付のイメージ" width="1200" height="896"><figcaption>受付のイメージ（AIで生成）</figcaption></figure>
   <div><p class="min" style="font-size:22px;font-weight:700;margin-bottom:6px">しんゆり美容健康クリニック <span style="white-space:nowrap">本院・府中院</span></p><p style="color:var(--sub);font-size:14px">本院：東京都稲城市　府中院：東京都府中市（2026年11月開院）<br>開発者の鈴木が院長を務める院です</p><p>本院・府中院の両院で、毎日の診療に使っています。府中院は開院準備の段階から導入し、予約・受付・番号札・呼び出し・カルテ・会計までをファストカルテで行っています。受付のキー操作や待合の読み上げは、開院準備のなかでスタッフの声を聞いて加えたものです。</p></div></div>
 </section>
 
 <section class="sec" id="partial">
- <h2><small>PARTIAL</small>いまのカルテ<br>のままでも</h2>
+ <h2><small aria-hidden="true">PARTIAL</small>いまのカルテ<br>のままでも</h2>
  <div>
   <p class="intro">カルテを入れ替えなくても導入できます。いまお使いの電子カルテや予約システムはそのままで、必要な仕組みだけを追加することもご相談ください。</p>
   <div class="parts">
-   <div class="part main"><div class="lbl">おすすめ</div><h3>番号札・呼び出し・待合モニター</h3><p>番号札の印刷、受付からの呼び出し、待合のモニターと音声の案内、患者のスマホへの通知。患者さんの名前を呼ばずにご案内できます。</p><p class="pp">9,800<small>円/月から</small></p></div>
-   <div class="part"><h3>予約サイトのまとめ取り込み</h3><p>ホットペッパー・キレイパス・トリビューの予約を1つの台帳に集め、空き状況を自動で合わせます。</p><p class="pp">19,800<small>円/月から</small></p></div>
-   <div class="part"><h3>電子同意書・Web問診</h3><p>タブレットでの署名と、来院前のスマホ問診。紙のスキャンや転記が要らなくなります。</p><p class="pp">9,800<small>円/月から</small></p></div>
+   <div class="part main"><div class="lbl">おすすめ</div><h3>番号札・呼び出し・待合モニター</h3><p>番号札の印刷、受付からの呼び出し、待合のモニターと音声の案内、患者のスマホへの通知。患者さんの名前を呼ばずにご案内できます。</p><p class="pp">9,800<small>円/月から</small></p><p class="pi">導入費 29,800円から</p></div>
+   <div class="part"><h3>予約サイトのまとめ取り込み</h3><p>ホットペッパー・キレイパス・トリビューの予約を1つの台帳に集め、空き状況を自動で合わせます。</p><p class="pp">19,800<small>円/月から</small></p><p class="pi">導入費 29,800円から</p></div>
+   <div class="part"><h3>電子同意書・Web問診</h3><p>タブレットでの署名と、来院前のスマホ問診。紙のスキャンや転記が要らなくなります。</p><p class="pp">9,800<small>円/月から</small></p><p class="pi">導入費 29,800円から</p></div>
    <div class="part"><h3>院に合わせた仕組みづくり</h3><p>ダッシュボード、院名入りの診察券アプリ、他のシステムとのつなぎ込みなど。</p><p class="pp">お見積もり</p></div>
   </div>
-  <p class="terms" style="margin:0">表示は1院あたり・税抜の目安です。いまのシステムとのつなぎ方（予約データの取り込み、受付での入力など）は、院の環境を見てご提案します。部分導入の導入費は、つなぎ方に合わせて29,800円からお見積もりします。</p>
+  <p class="terms" style="margin:0">表示は1院あたり・税抜の目安です。いまのシステムとのつなぎ方（予約データの取り込み、受付での入力など）は、院の環境を見てご提案し、導入費もつなぎ方に合わせてお見積もりします。</p>
  </div>
 </section>
 
 
 <section class="sec" id="feature">
- <h2><small>FEATURES</small>できること</h2>
+ <h2><small aria-hidden="true">FEATURES</small>できること</h2>
  <div class="feat">
   <div><h3>予約・受付</h3><ul><li>予約台帳・24時間Web予約</li><li>ホットペッパー・キレイパス・トリビューの自動取り込み</li><li>番号札・呼び出し・待合モニター</li><li>LINEでの予約確認・前日のお知らせ</li></ul></div>
   <div><h3>診察・記録</h3><ul><li>電子カルテ（シェーマ・写真・前回コピー）</li><li>定型文・選ぶ欄・オーダーセット</li><li>電子同意書・Web問診</li><li>見積書・契約書（特商法対応）</li></ul></div>
   <div><h3>会計・経営</h3><ul><li>会計・回数券の消化管理</li><li>デジタル診察券</li><li>経営ダッシュボード</li><li>操作の記録・端末の登録</li></ul></div>
  </div>
+ <p class="hoken"><b>保険診療への対応もご相談ください</b>いまは美容・自由診療の院向けが中心です。保険診療をしている院も、診療の内容をうかがって対応できる範囲をご説明します。</p>
 </section>
 
 <section class="sec" id="security">
- <h2><small>SECURITY</small>患者さんの<br>情報を守る</h2>
+ <h2><small aria-hidden="true">SECURITY</small>患者さんの<br>情報を守る</h2>
  <div>
   <p class="secu-lead">カルテには、顔写真や施術の記録など、外に出てはならない情報が集まります。自院で毎日使うカルテだからこそ、守りの仕組みも現場の運用に合わせて組み込んでいます。</p>
+  <p class="secu-note top">厚生労働省「医療情報システムの安全管理に関するガイドライン」に沿って、安全管理の説明資料を整えています。ご検討の際は、いまの対応状況をそのままお見せします。</p>
   <div class="secu">
    <div class="pt"><b>国内のクラウドに、暗号化して通信</b><p>カルテのデータは国内（東京）のデータセンターに置きます。端末とのやりとりは、すべて暗号化した通信（HTTPS）です。</p></div>
    <div class="pt"><b>スタッフごとのアカウントと権限</b><p>医師・看護師・受付など、職種や業務ごとに見られる範囲と操作を分けます。退職したスタッフのアカウントは、その場で止められます。</p></div>
@@ -231,51 +252,56 @@ footer{padding:30px 0;color:var(--sub);font-size:13px;border-top:1px solid var(-
    <div class="pt"><b>書き換えても、元の記録は消えない</b><p>カルテを直す前の内容は履歴として残り、誰がいつ何をしたかの操作記録も、あとから書き換えられない形で保存します。患者さんを一覧から外しても、診療の記録は残ります。</p></div>
    <div class="pt"><b>写真・同意書は非公開の保管庫に</b><p>施術写真や署名した同意書は、ログインしたスタッフだけが見られる場所に保管します。待合の呼び出し音声には、患者さんの名前を使いません。</p></div>
   </div>
-  <p class="secu-note">厚生労働省「医療情報システムの安全管理に関するガイドライン」に沿って、安全管理の説明資料を整えています。ご検討の際は、いまの対応状況をそのままお見せします。</p>
  </div>
 </section>
 
 <section class="sec" id="custom">
- <h2><small>CUSTOM</small>院のスタッフに<br>合わせて直す</h2>
+ <h2><small aria-hidden="true">CUSTOM</small>院のスタッフに<br>合わせて直す</h2>
  <div class="custom">
-  <div><p class="big">決まった形に院を合わせるのではなく、カルテのほうを院に合わせます。受付や看護師、カウンセラーが「ここが使いにくい」と感じたところを、開発者の私が直接聞いて、画面や流れを作り変えます。</p><p>メーカーの窓口に要望を出して、何か月も待つ必要はありません。府中院の開院準備でも、スタッフの声を聞いたその週のうちに、受付のキー操作や呼び出しの読み上げを変えました。</p><div class="freewk"><b>導入時の1週間は、どのプランでもカスタマイズ無料</b><span>使い始めの1週間に出たご要望は、プランにかかわらず無料で対応します。その後も続けて院に合わせて直していくのが、経営プラスです（月3時間まで）。</span></div><span class="badge">導入後の継続カスタマイズは経営プラスに含まれます（月3時間まで）</span></div>
+  <div><p class="big">決まった形に院を合わせるのではなく、カルテのほうを院に合わせます。受付や看護師、カウンセラーが「ここが使いにくい」と感じたところを、開発者の私が直接聞いて、画面や流れを作り変えます。</p><p>メーカーの窓口に要望を出して、何か月も待つ必要はありません。府中院の開院準備でも、スタッフの声を聞いたその週のうちに、受付のキー操作や呼び出しの読み上げを変えました。</p><div class="freewk"><b>導入時の1週間は、どのプランでもカスタマイズ無料</b><span>使い始めの1週間に出たご要望は、プランにかかわらず無料で対応します。その後も続けて院に合わせて直していくのが、経営プラスです（月3時間まで）。</span></div></div>
   <div>
    <div class="pt"><b>開発者が直接、要望を聞く</b><p>定期的に院のスタッフと話し、困りごとを集めます。</p></div>
    <div class="pt"><b>院のやり方に合わせて作り変える</b><p>画面の並び、入力欄、帳票、受付の流れなど。ほかの院向けの汎用機能にはしない調整も行います。</p></div>
    <div class="pt"><b>直したら、すぐ使える</b><p>入れ替え作業や追加の導入費は不要です。</p></div>
+   <div class="pt onsite"><b>代表の医師が、院に勤務して作ることもできます</b><p>代表の私が院に勤務し、現場で責任を持って、その院に合ったカルテを作ることもできます。ご相談ください。</p></div>
   </div>
  </div>
 </section>
 
 <section class="sec" id="price">
- <h2><small>PRICE</small>料金</h2>
+ <h2><small aria-hidden="true">PRICE</small>料金</h2>
  <div>
-  <div class="campaign"><b>モニター価格・先着5院 月額半額</b><span>導入事例の掲載と、ほかの院からの見学・ご相談の受け入れにご協力いただける先着5院は、月額が1年間半額になります。</span></div>
+  <div class="campaign"><b>モニター協力院を募集しています<span class="nw">（先着5院）</span></b><span>導入事例の掲載と、ほかの院からの見学・ご相談の受け入れにご協力いただける院は、利用開始から12か月間の月額が半額になります。</span></div>
   <div class="plans">
-   <div class="plan"><div class="tag">まずはカルテだけ</div><h3>ライト</h3><div class="was">通常 19,800円/月</div><div class="price"><span class="half">9,900</span><small>円/月</small><span class="mon">モニター価格</span></div><ul><li>電子カルテ・予約台帳</li><li>会計・回数券</li><li>電子同意書</li></ul><div class="init">導入費 49,800円<br>年払い・12か月契約なら0円</div></div>
-   <div class="plan main"><div class="tag">おすすめ</div><h3>スタンダード</h3><div class="was">通常 39,800円/月</div><div class="price"><span class="half">19,900</span><small>円/月</small><span class="mon">モニター価格</span></div><ul><li>ライトの全機能</li><li>予約サイトの自動取り込み</li><li>Web予約・LINE・呼び出し</li><li>診察券・Web問診</li></ul><div class="init">導入費 98,000円<br>年払い・12か月契約なら0円</div></div>
-   <div class="plan"><div class="tag">HPもまとめて</div><h3>ホームページ付き</h3><div class="was">通常 54,800円/月</div><div class="price"><span class="half">27,400</span><small>円/月</small><span class="mon">モニター価格</span></div><ul><li>スタンダードの全機能</li><li>クリニックのHP（独自ドメイン）</li><li>料金表はカルテと自動で一致</li></ul><div class="init">導入費 98,000円＋HP制作 98,000円<br>年払い・12か月契約なら導入費0円</div></div>
-   <div class="plan"><div class="tag">院に合わせて作り変える</div><h3>経営プラス</h3><div class="was">通常 79,800円/月</div><div class="price"><span class="half">39,900</span><small>円/月</small><span class="mon">モニター価格</span></div><ul><li>HP付きの全機能</li><li>経営ダッシュボード</li><li>会計ソフト向けの出力</li><li><b>開発者が院のスタッフに合わせてカスタム（月3時間まで）</b></li></ul><div class="init">導入費 98,000円＋HP制作 98,000円<br>年払い・12か月契約なら導入費0円</div></div>
+   <div class="plan"><div class="tag">まずはカルテだけ</div><h3>ライト</h3><div class="price">19,800<small>円/月</small></div><div class="monp">モニター協力院は12か月間 <b>9,900円</b></div><ul><li>電子カルテ・予約台帳</li><li>会計・回数券</li><li>電子同意書</li></ul><div class="init">導入費 49,800円<br>年払い・12か月契約なら0円</div></div>
+   <div class="plan main"><div class="tag">おすすめ</div><h3>スタンダード</h3><div class="price">39,800<small>円/月</small></div><div class="monp">モニター協力院は12か月間 <b>19,900円</b></div><ul><li>ライトの全機能</li><li>予約サイトの自動取り込み</li><li>Web予約・LINE・呼び出し</li><li>診察券・Web問診</li></ul><div class="init">導入費 98,000円<br>年払い・12か月契約なら0円</div></div>
+   <div class="plan"><div class="tag">HPもまとめて</div><h3>ホームページ付き</h3><div class="price">54,800<small>円/月</small></div><div class="monp">モニター協力院は12か月間 <b>27,400円</b></div><ul><li>スタンダードの全機能</li><li>クリニックのHP（独自ドメイン）</li><li>料金表はカルテと自動で一致</li></ul><div class="init">導入費 98,000円＋HP制作 98,000円<br>年払い・12か月契約なら導入費0円</div></div>
+   <div class="plan"><div class="tag">院に合わせて作り変える</div><h3>経営プラス</h3><div class="price">79,800<small>円/月</small></div><div class="monp">モニター協力院は12か月間 <b>39,900円</b></div><ul><li>HP付きの全機能</li><li>経営ダッシュボード</li><li>会計ソフト向けの出力</li><li><b>開発者が院のスタッフに合わせてカスタム<span class="nw">（月3時間まで）</span></b></li></ul><div class="init">導入費 98,000円＋HP制作 98,000円<br>年払い・12か月契約なら導入費0円</div></div>
   </div>
   <div class="cond"><dl>
+   <dt>契約期間</dt><dd>最低6か月。年払いは10%引き。</dd>
+   <dt>導入費</dt><dd>年払いまたは12か月契約なら0円（HP制作費は対象外。モニター価格と併用できます）。導入時の1週間はカスタマイズ無料。</dd>
+   <dt>2院目から</dt><dd>月額は半額。</dd>
    <dt>アカウント・端末</dt><dd>スタッフのアカウント数、端末の台数は無制限です（端末は院で登録したものだけが使えます）。</dd>
    <dt>写真・同意書の容量</dt><dd>1院あたり50GBまで含みます。超えた分は10GBごとに月500円です。</dd>
    <dt>解約するとき</dt><dd>患者情報・予約・来院履歴・カルテの記録は表計算ソフトで開ける形式（CSV）で、写真と同意書は元のファイルのままお渡しします。受け取りを確認してから、当社の保管分を削除します。</dd>
   </dl></div>
-  <p class="terms">いまのカルテのまま一部だけを導入する場合は、<a href="#partial">部分導入の料金</a>をご覧ください。表示は1院あたり・税抜。最低契約6か月、年払いは10%引き、2院目からは半額。年払いまたは12か月契約なら、導入費は0円です（HP制作費は対象外）。モニター価格の半額は、利用開始から12か月間の月額に適用します。導入時の1週間はカスタマイズ無料。システムの顧問や、医師が現場に入る業務改善は個別にご相談ください。</p>
+  <p class="terms">表示は1院あたり・税抜。いまのカルテのまま一部だけを導入する場合は、<a href="#partial">部分導入の料金</a>をご覧ください。システムの顧問や、代表の医師が院に勤務して現場でカルテを作る形も、個別にご相談ください。</p>
+  <div class="btns"><a class="btn solid" href="#contact">導入の相談をする</a><a class="btn" href="fastkarte-price.pdf" target="_blank" rel="noopener">料金表（PDF）</a></div>
  </div>
 </section>
 
 <section class="sec" id="maker">
- <h2><small>MAKER</small>つくり手</h2>
+ <h2><small aria-hidden="true">MAKER</small>つくり手</h2>
  <div class="doc">
   <div style="max-width:40em"><p class="min" style="font-size:22px;font-weight:700;margin-bottom:6px">鈴木 雄哉<span style="font-size:14px;font-weight:500;color:var(--sub);margin-left:12px">医師／合同会社鈴木医工 代表</span></p><p>聖路加国際病院で初期研修を修了し、都立広尾病院で救急科・小児科を研修。現在は藤田医科大学 総合診療科の専攻医として診療しながら、しんゆり美容健康クリニックの院長を務めています。</p><p>ファストカルテは、院長として受付や診察室に立つなかで自分で作ってきたものです。導入のご相談にも、私が直接うかがいます。</p></div></div>
 </section>
 
 <section class="sec" id="faq">
- <h2><small>FAQ</small>よくある<br>質問</h2>
+ <h2><small aria-hidden="true">FAQ</small>よくある<br>質問</h2>
  <div class="faq">
-  <details open><summary>保険診療にも使えますか？</summary><p>自由診療専用です。保険診療をしている院は、いまのところ対象外です。</p></details>
+  <details open><summary>保険診療にも使えますか？</summary><p>いまは美容・自由診療の院向けが中心ですが、保険診療への対応もご相談ください。院の診療の内容をうかがって、対応できる範囲をご説明します。</p></details>
+  <details><summary>開発者に院へ来てもらうことはできますか？</summary><p>できます。代表の医師が院に勤務し、現場で責任を持って、その院に合ったカルテを作ることもできます。勤務の日数や内容は、ご相談のうえで決めます。</p></details>
   <details><summary>いまのカルテからデータを移せますか？</summary><p>患者情報・予約・来院履歴は移せます。データ移行は50,000円からで、元のデータの形式を見て見積もります。</p></details>
   <details><summary>導入費には何が含まれますか？</summary><p>メニューと料金の登録、同意書・問診の取り込み、端末の設定、スタッフへの操作説明です。使い始めの1週間に出たご要望に合わせたカスタマイズも、無料で含まれます。</p></details>
   <details><summary>いまのカルテを使い続けたまま、番号札だけ入れられますか？</summary><p>できます。いまのカルテや予約システムはそのままに、番号札・呼び出し・待合モニターだけを導入する方法をご提案します。つなぎ方は院の環境を見て決めます。</p></details>
@@ -311,7 +337,7 @@ footer{padding:30px 0;color:var(--sub);font-size:13px;border-top:1px solid var(-
   <p>ご記入のメールアドレスに、鈴木から折り返しご連絡します。</p>
   <div class="btns" style="justify-content:center"><a class="btn solid" href="fastkarte-price.pdf" target="_blank" rel="noopener">料金表（PDF）を開く</a></div>
  </div>
- <p class="ask-alt">メールでのご相談も受け付けています：<span class="sel">info@suzuki-medical-engineering.work</span></p>
+ <p class="ask-alt">メールでのご相談も受け付けています：<a class="sel" href="mailto:info@suzuki-medical-engineering.work">info@suzuki-medical-engineering.work</a></p>
 </section>
 <script>
 (function(){
@@ -333,4 +359,5 @@ footer{padding:30px 0;color:var(--sub);font-size:13px;border-top:1px solid var(-
 </script>
 </div>
 <footer><div class="wrap"><img src="img/logo.svg" alt="" width="18" height="18" style="vertical-align:-3px;margin-right:6px">合同会社鈴木医工（Suzuki Medical Engineering LLC）　© 2026 ファストカルテ<div style="margin-top:8px;font-size:12px"><a href="terms.html" style="color:inherit;margin-right:14px">利用規約</a><a href="privacy.html" style="color:inherit">個人情報の取扱い</a></div></div></footer>
+<script>document.addEventListener("touchstart",function(){},{passive:true});</script>
 </body></html>
