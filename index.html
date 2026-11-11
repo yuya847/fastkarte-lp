@@ -72,7 +72,7 @@ h2 small{display:block;font-family:"Noto Sans JP";font-size:12px;color:var(--red
 .ev .d{font-family:"Shippori Mincho B1",serif;font-weight:700;font-size:15px;color:var(--sub)}
 .ev b{font-size:18px;display:block}.ev p{margin:2px 0 0;color:#4a4339;font-size:15px}
 
-.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.feat{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 36px}.feat-wrap{min-width:0}.soon{display:inline-block;font-size:11px;color:var(--red);border:1px solid var(--red);padding:0 6px;margin-left:6px;line-height:1.6;vertical-align:1px;white-space:nowrap}
 .feat h3{font-family:"Shippori Mincho B1",serif;font-size:19px;margin:0 0 8px;padding-bottom:8px;border-bottom:1px solid var(--ink)}
 .feat ul{margin:0;padding-left:1.1em;font-size:14px;color:#3d372f}.feat li{margin:3px 0}
 
@@ -144,6 +144,8 @@ footer{padding:30px 0;color:var(--sub);font-size:13px;border-top:1px solid var(-
 .final .ask-alt{margin:22px 0 0;font-size:13px}.ask-alt .sel{display:inline-block;font-weight:700;color:var(--ink);word-break:normal;padding:6px 0}
 @media(max-width:760px){.ask{padding:18px 16px 14px}}
 .final h2,.final p,.ask{word-break:auto-phrase}
+.connect{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}.connect .cn{background:#fff;border:1px solid var(--line);padding:16px 18px}.connect b{display:block;font-size:16px;margin-bottom:4px;word-break:auto-phrase}.connect p{margin:0;font-size:14px;color:#3d372f}
+@media(max-width:760px){.feat{grid-template-columns:1fr;gap:18px}.feat h3{font-size:17px;margin-bottom:6px}.feat ul{font-size:13.5px;line-height:1.7}.feat li{margin:1px 0}.connect{grid-template-columns:1fr;gap:10px;margin-top:20px}.connect p{font-size:13.5px}}.feat li{word-break:auto-phrase}
 .hoken{margin:22px 0 0;background:#fff;border:1px solid var(--line);border-left:4px solid var(--red);padding:14px 18px;font-size:14px;color:#3d372f}.hoken b{display:block;font-size:16px;color:var(--ink);margin-bottom:2px}
 .custom .pt.onsite{border:2px solid var(--red)}.custom .pt.onsite b{color:var(--red)}
 .secu-note.top{margin:0 0 20px}
@@ -161,9 +163,17 @@ footer a{display:inline-block;padding:12px 0}
  .plan{padding:18px 16px}.plan ul{margin:8px 0}
  html{scroll-padding-top:64px}
 }
+.maker{display:grid;grid-template-columns:200px 1fr;gap:32px;align-items:start}
+.maker .face{margin:0}.maker .face img{width:100%;height:auto;display:block;border:1px solid var(--line);box-shadow:0 18px 40px -24px rgba(29,26,22,.4)}
+.mk-name{font-size:24px;font-weight:700;margin:0}.mk-kana{font-family:"Noto Sans JP",sans-serif;font-size:12px;font-weight:500;color:var(--sub);margin-left:10px;letter-spacing:.1em}
+.mk-role{margin:2px 0 14px;font-size:14px;color:var(--sub);word-break:auto-phrase}.mk-role span+span:before{content:"／"}
+.mk-body>p:not(.mk-name):not(.mk-role){margin:0 0 14px;font-size:16px;max-width:38em}
+.mk-cv{display:grid;grid-template-columns:6.5em 1fr;gap:6px 16px;margin:6px 0 0;padding:14px 0 0;border-top:1px solid var(--line);font-size:14px}
+.mk-cv dt{font-weight:700;color:var(--sub);white-space:nowrap}.mk-cv dd{margin:0;color:#3d372f}
+@media(max-width:760px){.maker{grid-template-columns:120px 1fr;gap:16px}.mk-name{font-size:21px}.mk-kana{display:block;margin:0}.mk-cv{grid-column:1/-1;grid-template-columns:5.5em 1fr;font-size:13px}.mk-body{display:contents}.maker .face{grid-row:1/3;align-self:start}.mk-name{align-self:end}.mk-role{align-self:start;margin:6px 0 0;font-size:13px;line-height:1.6}.mk-role span{display:block}.mk-role span+span:before{content:none}.mk-body>p:not(.mk-name):not(.mk-role){grid-column:1/-1;margin:0;font-size:15px}}
 .freewk{background:#fff;border:2px solid var(--red);padding:14px 16px;margin:14px 0 10px}.freewk b{display:block;color:var(--red);font-size:16px}.freewk span{font-size:13px;color:#3d372f}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://fastkarte.com/#org","name":"合同会社鈴木医工","alternateName":"Suzuki Medical Engineering LLC","url":"https://suzuki-medical-engineering.work/","logo":"https://fastkarte.com/img/logo.svg","email":"info@suzuki-medical-engineering.work","taxID":"5040003029730","address":{"@type":"PostalAddress","addressRegion":"千葉県","addressLocality":"松戸市","addressCountry":"JP"},"founder":{"@id":"https://fastkarte.com/#founder"}},{"@type":"Person","@id":"https://fastkarte.com/#founder","name":"鈴木 雄哉","jobTitle":"医師／合同会社鈴木医工 代表","worksFor":{"@id":"https://fastkarte.com/#org"}},{"@type":"WebSite","@id":"https://fastkarte.com/#site","url":"https://fastkarte.com/","name":"ファストカルテ","inLanguage":"ja","publisher":{"@id":"https://fastkarte.com/#org"}},{"@type":"SoftwareApplication","@id":"https://fastkarte.com/#app","name":"ファストカルテ","alternateName":"FastKarte","applicationCategory":"BusinessApplication","applicationSubCategory":"電子カルテ","operatingSystem":"Web（ブラウザ）、iPad、iPhone","url":"https://fastkarte.com/","inLanguage":"ja","description":"美容・自由診療クリニック向けのクラウド電子カルテ。予約サイト（ホットペッパー・キレイパス・トリビュー）の自動取り込み、番号札・呼び出し・待合モニター、電子同意書・Web問診、会計・回数券の管理をひとつにまとめる。院長でもある医師が開発し、自院（しんゆり美容健康クリニック 本院・府中院）で毎日使っている。保険診療への対応は相談に応じる。","featureList":["予約台帳・24時間Web予約","ホットペッパー・キレイパス・トリビューの予約の自動取り込み","番号札・呼び出し・待合モニター","電子カルテ（シェーマ・写真・前回コピー）","電子同意書・Web問診","見積書・契約書（特商法対応）","会計・回数券の消化管理","経営ダッシュボード"],"screenshot":"https://fastkarte.com/img/screen-reception.jpg","publisher":{"@id":"https://fastkarte.com/#org"},"author":{"@id":"https://fastkarte.com/#founder"},"offers":[{"@type":"Offer","name":"ライト","price":"19800","priceCurrency":"JPY","description":"電子カルテ・予約台帳、会計・回数券、電子同意書（月額・1院あたり・税抜）","priceSpecification":{"@type":"UnitPriceSpecification","price":19800,"priceCurrency":"JPY","unitText":"月","valueAddedTaxIncluded":false}},{"@type":"Offer","name":"スタンダード","price":"39800","priceCurrency":"JPY","description":"ライトの全機能＋予約サイトの自動取り込み、Web予約・LINE・呼び出し、診察券・Web問診（月額・1院あたり・税抜）","priceSpecification":{"@type":"UnitPriceSpecification","price":39800,"priceCurrency":"JPY","unitText":"月","valueAddedTaxIncluded":false}},{"@type":"Offer","name":"ホームページ付き","price":"54800","priceCurrency":"JPY","description":"スタンダードの全機能＋クリニックのHP（月額・1院あたり・税抜）","priceSpecification":{"@type":"UnitPriceSpecification","price":54800,"priceCurrency":"JPY","unitText":"月","valueAddedTaxIncluded":false}},{"@type":"Offer","name":"経営プラス","price":"79800","priceCurrency":"JPY","description":"HP付きの全機能＋経営ダッシュボード、会計ソフト向けの出力、継続カスタマイズ（月3時間まで）（月額・1院あたり・税抜）","priceSpecification":{"@type":"UnitPriceSpecification","price":79800,"priceCurrency":"JPY","unitText":"月","valueAddedTaxIncluded":false}}]},{"@type":"FAQPage","@id":"https://fastkarte.com/#faq","mainEntity":[{"@type":"Question","name":"保険診療にも使えますか？","acceptedAnswer":{"@type":"Answer","text":"いまは美容・自由診療の院向けが中心ですが、保険診療への対応もご相談ください。院の診療の内容をうかがって、対応できる範囲をご説明します。"}},{"@type":"Question","name":"開発者に院へ来てもらうことはできますか？","acceptedAnswer":{"@type":"Answer","text":"できます。代表の医師が院に勤務し、現場で責任を持って、その院に合ったカルテを作ることもできます。勤務の日数や内容は、ご相談のうえで決めます。"}},{"@type":"Question","name":"いまのカルテからデータを移せますか？","acceptedAnswer":{"@type":"Answer","text":"患者情報・予約・来院履歴は移せます。データ移行は50,000円からで、元のデータの形式を見て見積もります。"}},{"@type":"Question","name":"導入費には何が含まれますか？","acceptedAnswer":{"@type":"Answer","text":"メニューと料金の登録、同意書・問診の取り込み、端末の設定、スタッフへの操作説明です。使い始めの1週間に出たご要望に合わせたカスタマイズも、無料で含まれます。"}},{"@type":"Question","name":"いまのカルテを使い続けたまま、番号札だけ入れられますか？","acceptedAnswer":{"@type":"Answer","text":"できます。いまのカルテや予約システムはそのままに、番号札・呼び出し・待合モニターだけを導入する方法をご提案します。つなぎ方は院の環境を見て決めます。"}},{"@type":"Question","name":"データはどこに保存されますか？","acceptedAnswer":{"@type":"Answer","text":"国内（東京）のクラウドに保存します。バックアップの取り方と保存先は、導入時に院ごとに設定します。"}}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://fastkarte.com/#org","name":"合同会社鈴木医工","alternateName":"Suzuki Medical Engineering LLC","url":"https://suzuki-medical-engineering.work/","logo":"https://fastkarte.com/img/logo.svg","email":"info@suzuki-medical-engineering.work","taxID":"5040003029730","address":{"@type":"PostalAddress","addressRegion":"千葉県","addressLocality":"松戸市","addressCountry":"JP"},"founder":{"@id":"https://fastkarte.com/#founder"}},{"@type":"Person","@id":"https://fastkarte.com/#founder","name":"鈴木 雄哉","jobTitle":"医師／合同会社鈴木医工 代表社員／しんゆり美容健康クリニック 院長","worksFor":{"@id":"https://fastkarte.com/#org"},"alternateName":"Yuya Suzuki","image":"https://fastkarte.com/img/suzuki-yuya.jpg","alumniOf":{"@type":"CollegeOrUniversity","name":"北里大学医学部"},"hasOccupation":{"@type":"Occupation","name":"医師"},"memberOf":[{"@type":"Organization","name":"日本病院総合診療医学会"},{"@type":"Organization","name":"日本プライマリ・ケア連合学会"}]},{"@type":"WebSite","@id":"https://fastkarte.com/#site","url":"https://fastkarte.com/","name":"ファストカルテ","inLanguage":"ja","publisher":{"@id":"https://fastkarte.com/#org"}},{"@type":"SoftwareApplication","@id":"https://fastkarte.com/#app","name":"ファストカルテ","alternateName":"FastKarte","applicationCategory":"BusinessApplication","applicationSubCategory":"電子カルテ","operatingSystem":"Web（ブラウザ）、iPad、iPhone","url":"https://fastkarte.com/","inLanguage":"ja","description":"美容・自由診療クリニック向けのクラウド電子カルテ。予約サイト（ホットペッパー・キレイパス・トリビュー）の自動取り込み、番号札・呼び出し・待合モニター、電子同意書・Web問診、会計・回数券の管理をひとつにまとめる。院長でもある医師が開発し、自院（しんゆり美容健康クリニック 本院・府中院）で毎日使っている。保険診療への対応は相談に応じる。","featureList":["予約台帳・24時間Web予約","ホットペッパー・キレイパス・トリビューの予約の自動取り込み","番号札・呼び出し・待合モニター","LINE・トリビューのメッセージ受信箱","電子カルテ（シェーマ・写真・前回コピー）","医師・看護師への指示と担当の割り振り","写真の分類と画像カレンダー","電子同意書・Web問診","見積書・契約書（特商法対応）","紹介状（診療情報提供書）","会計・回数券の消化管理","Square端末での決済と入金の自動照合","事前決済（カード登録）","売上のCSV出力","在庫管理","経営ダッシュボード","院名入りの公式アプリ（iPhone）","公式アプリ・Web診察券向けの患者API","LINE公式アカウントとの連携","AI連携（MCP）は準備中"],"screenshot":"https://fastkarte.com/img/screen-reception.jpg","publisher":{"@id":"https://fastkarte.com/#org"},"author":{"@id":"https://fastkarte.com/#founder"},"offers":[{"@type":"Offer","name":"ライト","price":"19800","priceCurrency":"JPY","description":"電子カルテ・予約台帳、会計・回数券、電子同意書（月額・1院あたり・税抜）","priceSpecification":{"@type":"UnitPriceSpecification","price":19800,"priceCurrency":"JPY","unitText":"月","valueAddedTaxIncluded":false}},{"@type":"Offer","name":"スタンダード","price":"39800","priceCurrency":"JPY","description":"ライトの全機能＋予約サイトの自動取り込み、Web予約・LINE・呼び出し、診察券・Web問診（月額・1院あたり・税抜）","priceSpecification":{"@type":"UnitPriceSpecification","price":39800,"priceCurrency":"JPY","unitText":"月","valueAddedTaxIncluded":false}},{"@type":"Offer","name":"ホームページ付き","price":"54800","priceCurrency":"JPY","description":"スタンダードの全機能＋クリニックのHP（月額・1院あたり・税抜）","priceSpecification":{"@type":"UnitPriceSpecification","price":54800,"priceCurrency":"JPY","unitText":"月","valueAddedTaxIncluded":false}},{"@type":"Offer","name":"経営プラス","price":"79800","priceCurrency":"JPY","description":"HP付きの全機能＋経営ダッシュボード、会計ソフト向けの出力、継続カスタマイズ（月3時間まで）（月額・1院あたり・税抜）","priceSpecification":{"@type":"UnitPriceSpecification","price":79800,"priceCurrency":"JPY","unitText":"月","valueAddedTaxIncluded":false}}]},{"@type":"FAQPage","@id":"https://fastkarte.com/#faq","mainEntity":[{"@type":"Question","name":"保険診療にも使えますか？","acceptedAnswer":{"@type":"Answer","text":"いまは美容・自由診療の院向けが中心ですが、保険診療への対応もご相談ください。院の診療の内容をうかがって、対応できる範囲をご説明します。"}},{"@type":"Question","name":"開発者に院へ来てもらうことはできますか？","acceptedAnswer":{"@type":"Answer","text":"できます。代表の医師が院に勤務し、現場で責任を持って、その院に合ったカルテを作ることもできます。勤務の日数や内容は、ご相談のうえで決めます。"}},{"@type":"Question","name":"いまのカルテからデータを移せますか？","acceptedAnswer":{"@type":"Answer","text":"患者情報・予約・来院履歴は移せます。データ移行は50,000円からで、元のデータの形式を見て見積もります。"}},{"@type":"Question","name":"導入費には何が含まれますか？","acceptedAnswer":{"@type":"Answer","text":"メニューと料金の登録、同意書・問診の取り込み、端末の設定、スタッフへの操作説明です。使い始めの1週間に出たご要望に合わせたカスタマイズも、無料で含まれます。"}},{"@type":"Question","name":"いまのカルテを使い続けたまま、番号札だけ入れられますか？","acceptedAnswer":{"@type":"Answer","text":"できます。いまのカルテや予約システムはそのままに、番号札・呼び出し・待合モニターだけを導入する方法をご提案します。つなぎ方は院の環境を見て決めます。"}},{"@type":"Question","name":"AIやほかのシステムと連携できますか？","acceptedAnswer":{"@type":"Answer","text":"院の公式アプリ・Web診察券向けの患者API、LINE公式アカウントとの連携、売上のCSV出力を備えています。ClaudeなどのAIアシスタントからカルテを使える接続口（MCP）は準備中で、院が許可した範囲だけで動く仕組みにしています。いまお使いのシステムとのつなぎ込みは、ご相談ください。"}},{"@type":"Question","name":"データはどこに保存されますか？","acceptedAnswer":{"@type":"Answer","text":"国内（東京）のクラウドに保存します。バックアップの取り方と保存先は、導入時に院ごとに設定します。"}}]}]}</script>
 </head><body>
 <div class="wrap">
 <nav><a class="logo" href="#"><img src="img/fastkarte-logo.svg" alt="ファストカルテ"></a>
@@ -211,7 +221,7 @@ footer a{display:inline-block;padding:12px 0}
 <section class="sec" id="case">
  <h2><small aria-hidden="true">CASE</small>導入実績</h2>
  <div class="doc case-doc"><figure class="shot"><img src="img/fuchu-reception.jpg" alt="府中院の受付のイメージ" width="1200" height="896"><figcaption>受付のイメージ（AIで生成）</figcaption></figure>
-  <div><p class="min" style="font-size:22px;font-weight:700;margin-bottom:6px">しんゆり美容健康クリニック <span style="white-space:nowrap">本院・府中院</span></p><p style="color:var(--sub);font-size:14px">本院：東京都稲城市　府中院：東京都府中市（2026年11月開院）<br>開発者の鈴木が院長を務める院です</p><p>本院・府中院の両院で、毎日の診療に使っています。府中院は開院準備の段階から導入し、予約・受付・番号札・呼び出し・カルテ・会計までをファストカルテで行っています。受付のキー操作や待合の読み上げは、開院準備のなかでスタッフの声を聞いて加えたものです。</p></div></div>
+  <div><p class="min" style="font-size:22px;font-weight:700;margin-bottom:6px">しんゆり美容健康クリニック <span style="white-space:nowrap">本院・府中院</span></p><p style="color:var(--sub);font-size:14px">本院：東京都稲城市　府中院：東京都府中市（2026年11月開院）<br>開発者の鈴木が院長を務める院です</p><p>府中院は開院準備の段階から導入し、予約・受付・番号札・呼び出し・カルテ・会計までをファストカルテで行っています。本院でも、予約台帳・電子同意書・Web問診・診察券を毎日の診療で使っています。受付のキー操作や待合の読み上げは、開院準備のなかでスタッフの声を聞いて加えたものです。</p></div></div>
 </section>
 
 <section class="sec" id="partial">
@@ -231,12 +241,19 @@ footer a{display:inline-block;padding:12px 0}
 
 <section class="sec" id="feature">
  <h2><small aria-hidden="true">FEATURES</small>できること</h2>
+ <div class="feat-wrap">
  <div class="feat">
-  <div><h3>予約・受付</h3><ul><li>予約台帳・24時間Web予約</li><li>ホットペッパー・キレイパス・トリビューの自動取り込み</li><li>番号札・呼び出し・待合モニター</li><li>LINEでの予約確認・前日のお知らせ</li></ul></div>
-  <div><h3>診察・記録</h3><ul><li>電子カルテ（シェーマ・写真・前回コピー）</li><li>定型文・選ぶ欄・オーダーセット</li><li>電子同意書・Web問診</li><li>見積書・契約書（特商法対応）</li></ul></div>
-  <div><h3>会計・経営</h3><ul><li>会計・回数券の消化管理</li><li>デジタル診察券</li><li>経営ダッシュボード</li><li>操作の記録・端末の登録</li></ul></div>
+  <div><h3>予約・受付</h3><ul><li>予約台帳・24時間Web予約</li><li>ホットペッパー・キレイパス・トリビューの自動取り込み</li><li>院で止めた枠は予約サイトの受付も止める</li><li>番号札・呼び出し・待合モニター</li><li>LINEでの予約確認・前日のお知らせ</li><li>LINE・トリビューのメッセージを1つの受信箱で</li><li>診察券からの再診予約</li></ul></div>
+  <div><h3>診察・記録</h3><ul><li>電子カルテ（シェーマ・写真・前回コピー）</li><li>定型文・選ぶ欄・オーダーセット</li><li>医師・看護師への指示と担当の割り振り</li><li>写真の分類（施術前・施術後・書類）と画像カレンダー</li><li>電子同意書・Web問診</li><li>見積書・契約書（特商法対応）</li><li>紹介状（診療情報提供書）</li></ul></div>
+  <div><h3>会計・経営</h3><ul><li>会計・回数券の消化管理</li><li>Square端末での決済と入金の自動照合</li><li>カードを登録しておく事前決済</li><li>売上のCSV出力（患者名を伏せて出せる）</li><li>在庫管理（入庫・出庫・少なくなったら知らせる）</li><li>経営ダッシュボード（回転・滞在時間の分析も）</li><li>スタッフのマイページ（担当件数・インセンティブ）</li></ul></div>
+  <div><h3>安全・連携</h3><ul><li>操作の記録・端末の登録</li><li>インシデント報告</li><li>院名入りの公式アプリ（iPhone）</li><li>公式アプリ・Web診察券向けの患者API</li><li>LINE公式アカウントとの連携</li><li>AI連携（MCP）<span class="soon">準備中</span></li></ul></div>
+ </div>
+ <div class="connect">
+  <div class="cn"><b>AIとの連携（MCP）<span class="soon">準備中</span></b><p>ClaudeなどのAIアシスタントから、院が許可した範囲でカルテの集計や予約の確認ができる接続口（MCP：AIとソフトをつなぐ共通の仕組み）を、他院向けの版に組み込んでいます。初めはすべてオフで、使う人と範囲は院長が決めます。患者の氏名は伏せて渡し、予約の取り消しなどはスタッフが画面で承認してから実行します。会計やカルテの記載、新しい患者の登録はAIからはできません。提供の開始時期は、ご相談のときにご案内します。</p></div>
+  <div class="cn"><b>ほかのシステムとの連携（API）</b><p>院の公式アプリ・Web診察券向けの患者API、LINE公式アカウントとの連携、売上のCSV出力を備えています。いまお使いのシステムや会計ソフトとのつなぎ込みは、ご相談ください。</p></div>
  </div>
  <p class="hoken"><b>保険診療への対応もご相談ください</b>いまは美容・自由診療の院向けが中心です。保険診療をしている院も、診療の内容をうかがって対応できる範囲をご説明します。</p>
+ </div>
 </section>
 
 <section class="sec" id="security">
@@ -293,8 +310,23 @@ footer a{display:inline-block;padding:12px 0}
 
 <section class="sec" id="maker">
  <h2><small aria-hidden="true">MAKER</small>つくり手</h2>
- <div class="doc">
-  <div style="max-width:40em"><p class="min" style="font-size:22px;font-weight:700;margin-bottom:6px">鈴木 雄哉<span style="font-size:14px;font-weight:500;color:var(--sub);margin-left:12px">医師／合同会社鈴木医工 代表</span></p><p>聖路加国際病院で初期研修を修了し、都立広尾病院で救急科・小児科を研修。現在は藤田医科大学 総合診療科の専攻医として診療しながら、しんゆり美容健康クリニックの院長を務めています。</p><p>ファストカルテは、院長として受付や診察室に立つなかで自分で作ってきたものです。導入のご相談にも、私が直接うかがいます。</p></div></div>
+ <div class="maker">
+  <figure class="face"><img src="img/suzuki-yuya.jpg" alt="鈴木 雄哉（医師・合同会社鈴木医工 代表）の顔写真" width="480" height="600" loading="lazy"></figure>
+  <div class="mk-body">
+   <p class="min mk-name">鈴木 雄哉<span class="mk-kana">すずき ゆうや</span></p>
+   <p class="mk-role"><span>医師</span><span>合同会社鈴木医工 代表社員</span><span>しんゆり美容健康クリニック 院長</span></p>
+   <p>ファストカルテは、院長として受付や診察室に立つなかで、自分で作ってきた電子カルテです。導入のご相談にも、私が直接うかがいます。ご希望があれば、院に勤務して、現場で責任を持ってその院に合ったカルテを作ります。</p>
+   <dl class="mk-cv">
+    <dt>2022年</dt><dd>北里大学医学部医学科 卒業、医師免許を取得</dd>
+    <dt>初期研修</dt><dd>聖路加国際病院 初期研修 修了</dd>
+    <dt>2024年〜</dt><dd>総合診療の専門研修（同善CCHプログラム）。豊田地域医療センター、藤田医科大学岡崎医療センター 総合診療科</dd>
+    <dt>2025年</dt><dd>都立広尾病院 救急科・小児科</dd>
+    <dt>2026年〜</dt><dd>たちばな台病院 総合診療科で診療</dd>
+    <dt>2026年3月</dt><dd>合同会社鈴木医工を設立</dd>
+    <dt>所属学会</dt><dd>日本病院総合診療医学会、日本プライマリ・ケア連合学会</dd>
+   </dl>
+  </div>
+ </div>
 </section>
 
 <section class="sec" id="faq">
@@ -305,6 +337,7 @@ footer a{display:inline-block;padding:12px 0}
   <details><summary>いまのカルテからデータを移せますか？</summary><p>患者情報・予約・来院履歴は移せます。データ移行は50,000円からで、元のデータの形式を見て見積もります。</p></details>
   <details><summary>導入費には何が含まれますか？</summary><p>メニューと料金の登録、同意書・問診の取り込み、端末の設定、スタッフへの操作説明です。使い始めの1週間に出たご要望に合わせたカスタマイズも、無料で含まれます。</p></details>
   <details><summary>いまのカルテを使い続けたまま、番号札だけ入れられますか？</summary><p>できます。いまのカルテや予約システムはそのままに、番号札・呼び出し・待合モニターだけを導入する方法をご提案します。つなぎ方は院の環境を見て決めます。</p></details>
+    <details><summary>AIやほかのシステムと連携できますか？</summary><p>院の公式アプリ・Web診察券向けの患者API、LINE公式アカウントとの連携、売上のCSV出力を備えています。ClaudeなどのAIアシスタントからカルテを使える接続口（MCP）は準備中で、院が許可した範囲だけで動く仕組みにしています。いまお使いのシステムとのつなぎ込みは、ご相談ください。</p></details>
     <details><summary>データはどこに保存されますか？</summary><p>国内（東京）のクラウドに保存します。バックアップの取り方と保存先は、導入時に院ごとに設定します。</p></details>
  </div>
 </section>
