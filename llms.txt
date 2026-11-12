@@ -56,6 +56,7 @@
 
 - [ファストカルテ（製品サイト）](https://fastkarte.com/)：機能、画面、導入実績、セキュリティ、料金、よくある質問
 - [料金表（PDF）](https://fastkarte.com/fastkarte-price.pdf)：プラン・条件・部分導入の料金
+- [ファストカルテ（診療所向け・ORCA連携）](https://fastkarte.com/clinic/)：日医標準レセプトソフト（ORCA）をお使いの無床診療所向け。ORCAはそのままにカルテだけを切り替える。月18,000円の予定。2026年11月時点で先行導入の受付と架空の記録での試用の段階。ORCAとの受け渡しの口はサーバー側にあり、画面からの操作と実際のORCAとの接続試験はこれから。オンプレミスのORCAへの接続の仕組みは未対応。開発者の医師が院で働きながら直すこともできる
 - [患者アンケートと口コミ案内](https://fastkarte.com/kuchikomi/)：院内QRコードからの1分アンケート。月3,980円（単品）
 - [利用規約](https://fastkarte.com/terms.html)
 - [個人情報の取扱い](https://fastkarte.com/privacy.html)
