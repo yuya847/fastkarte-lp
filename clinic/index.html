@@ -39,7 +39,7 @@ h2 small{display:block;font-family:"Noto Sans JP";font-size:12px;color:var(--red
 .cost .plus b{font-family:"Shippori Mincho B1",serif;font-size:26px;color:var(--red)}
 .arrow{align-self:center;font-size:28px;color:var(--sub)}
 .note{font-size:13px;color:var(--sub);margin:14px 0 0}
-.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;counter-reset:f;list-style:none;padding:0;margin:0}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;counter-reset:f;list-style:none;padding:0;margin:0}
 .flow li{counter-increment:f;background:#fff;border:1px solid var(--line);padding:16px 16px 16px;position:relative}
 .flow li:before{content:counter(f);display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-weight:700;font-size:14px;margin-bottom:8px}
 .flow b{display:block;font-size:15px}.flow span{font-size:13.5px;color:#3d372f}
@@ -74,7 +74,7 @@ h2 small{display:block;font-family:"Noto Sans JP";font-size:12px;color:var(--red
 .ask-done{max-width:560px;margin:8px auto 0;background:#fff;border:2px solid var(--ink);padding:28px 24px}.final .ask-done p{margin:0 0 16px;color:#3d372f}
 .alt{margin-top:18px;font-size:13px;color:var(--sub)}.alt a{display:inline-block;font-weight:700;color:var(--ink);padding:6px 0}
 footer{padding:26px 0;color:var(--sub);font-size:13px;border-top:1px solid var(--line)}
-@media(max-width:860px){.hero{grid-template-columns:1fr;gap:28px}.cost{grid-template-columns:1fr}.arrow{transform:rotate(90deg);justify-self:center}.flow{grid-template-columns:1fr 1fr}}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:28px}.cost{grid-template-columns:1fr}.arrow{transform:rotate(90deg);justify-self:center}.flow{grid-template-columns:1fr 1fr}.flow li:last-child:nth-child(odd){grid-column:1/-1}}
 @media(max-width:760px){
  .wrap{padding:0 16px}nav{padding:12px 0;position:sticky;top:0;background:var(--paper);z-index:5;margin:0 -16px;padding-left:16px;padding-right:16px;border-bottom:1px solid var(--line)}.logo img{height:24px}
  h1{font-size:30px}.lead{font-size:15px}.hero{padding:16px 0 40px}
@@ -84,7 +84,7 @@ footer{padding:26px 0;color:var(--sub);font-size:13px;border-top:1px solid var(-
  .pc{display:none}.flow li{display:grid;grid-template-columns:28px 1fr;column-gap:10px;padding:12px 14px}.flow li:before{margin:2px 0 0;grid-row:1/3}.logo span{font-size:11px;padding:1px 6px}
 }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://fastkarte.com/#org","name":"合同会社鈴木医工","url":"https://suzuki-medical-engineering.work/"},{"@type":"SoftwareApplication","@id":"https://fastkarte.com/clinic/#app","name":"ファストカルテ（診療所向け）","applicationCategory":"BusinessApplication","applicationSubCategory":"電子カルテ","operatingSystem":"Web（ブラウザ）","url":"https://fastkarte.com/clinic/","inLanguage":"ja","description":"日医標準レセプトソフト（ORCA）をお使いの無床診療所向けのクラウド電子カルテ。ORCAはそのままに、カルテだけを切り替える。ORCAとの連携（患者・保険の取り込み、受付の登録、診療行為と病名の送信、会計の参照）の口をサーバー側に備え、画面からの操作と実際のORCAとの接続試験はこれから。オンプレミスのORCAへの接続の仕組みは未対応。2026年11月時点で先行導入の受付と架空の記録での試用の段階。月額は18,000円の予定。","publisher":{"@id":"https://fastkarte.com/#org"},"featureList":["外来の受付から会計までの流れ","記事とオーダ（下書きのオーダをドラッグで確定）","処方の安全チェック","紹介状・文書・同意書","検査（単純写真・CT・MRI・心電図・エコー・内視鏡・生理検査）","統計・経営の分析","次回予約のおすすめ（処方がなくなる日の前の診療日を候補に出す）","カルテ要約（AIの下書き・根拠の行を表示）","院のセキュリティ点検（厚生労働省のチェックリスト）","予防接種（予診・ロットの記録、記録を止める条件）","健診（定期・雇入時、特定健診・後期高齢者の健診の結果と医師の判定）","日医標準レセプトソフト（ORCA）との連携（接続試験はこれから）","開発者の医師が院で働きながら直すこともできる（個別に相談）"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"ORCAの費用は変わりますか？","acceptedAnswer":{"@type":"Answer","text":"ORCAの費用はいまのままです。ファストカルテとつなぐために、ORCA側で追加の利用料がかかる仕組みは見当たりません。サポート会社によって料金の決め方が違うため、念のためお使いのサポート会社にもご確認ください。"}},{"@type":"Question","name":"ファストカルテの月額はいくらですか？","acceptedAnswer":{"@type":"Answer","text":"月18,000円を予定しています。先行導入の院とのご相談を経て決めます。"}},{"@type":"Question","name":"すぐに本番で使えますか？","acceptedAnswer":{"@type":"Answer","text":"いまは架空の記録での試用と、先行導入の受付の段階です。院のORCAとの接続の試験を経てから、実際の運用に進みます。"}},{"@type":"Question","name":"オンプレミス（院内のサーバー）のORCAでも使えますか？","acceptedAnswer":{"@type":"Answer","text":"ファストカルテはクラウドで動くため、院内のネットワークにあるORCAにつなぐには、院のVPNや院内に置く中継などの仕組みが要ります。この仕組みはまだ無く、先行導入の院と一緒に決めます。"}},{"@type":"Question","name":"WebORCA（クラウド版）でも使えますか？","acceptedAnswer":{"@type":"Answer","text":"WebORCAクラウドのクライアント証明書には、まだ対応していません。対応の予定は、ご相談のときにお伝えします。"}},{"@type":"Question","name":"開発者に院で働きながら直してもらえますか？","acceptedAnswer":{"@type":"Answer","text":"できます。開発者の医師が院に勤務し、診療の現場で使いながら、その院に合うようにカルテを直していくこともできます。勤務の日数や内容は、ご相談のうえで決めます。"}},{"@type":"Question","name":"どんな診療所が対象ですか？","acceptedAnswer":{"@type":"Answer","text":"ORCAをお使いの無床の診療所です。内科をはじめ、外来中心の院を想定しています。"}}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://fastkarte.com/#org","name":"合同会社鈴木医工","url":"https://suzuki-medical-engineering.work/"},{"@type":"SoftwareApplication","@id":"https://fastkarte.com/clinic/#app","name":"ファストカルテ（診療所向け）","applicationCategory":"BusinessApplication","applicationSubCategory":"電子カルテ","operatingSystem":"Web（ブラウザ）","url":"https://fastkarte.com/clinic/","inLanguage":"ja","description":"日医標準レセプトソフト（ORCA）をお使いの無床診療所向けのクラウド電子カルテ。ORCAはそのままに、カルテだけを切り替える。会計の画面にORCAとの受け渡しのボタン（送る内容の確認、ORCAの患者の照合、受付の送信、診療行為と病名の中途データ送信、ORCAの会計の読み込み）があり、WebORCAクラウドのクライアント証明書にも対応。本物のORCA（試用環境を含む）とはまだつないでおらず、ORCAの試用環境で確かめてから提供する。オンプレミスのORCAへの接続の仕組みは未対応。2026年11月時点で先行導入の受付と架空の記録での試用の段階。月額は18,000円の予定。","publisher":{"@id":"https://fastkarte.com/#org"},"featureList":["外来の受付から会計までの流れ","記事とオーダ（下書きのオーダをドラッグで確定）","処方の安全チェック","紹介状・文書・同意書","検査（単純写真・CT・MRI・心電図・エコー・内視鏡・生理検査）","統計・経営の分析","次回予約のおすすめ（処方がなくなる日の前の診療日を候補に出す）","カルテ要約（AIの下書き・根拠の行を表示）","院のセキュリティ点検（厚生労働省のチェックリスト）","予防接種（予診・ロットの記録、記録を止める条件）","健診（定期健康診断・雇入時・特定健診・後期高齢者・自費のコースを選んでオーダー、身長・体重・血圧・血液検査の値はカルテから読み込み、医師が判定）","日医標準レセプトソフト（ORCA）との連携（会計の画面から送信・照合。ORCAの試用環境で確かめてから提供）","開発者の医師が院で働きながら直すこともできる（個別に相談）"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"ORCAの費用は変わりますか？","acceptedAnswer":{"@type":"Answer","text":"ORCAの費用はいまのままです。ファストカルテとつなぐために、ORCA側で追加の利用料がかかる仕組みは見当たりません。サポート会社によって料金の決め方が違うため、念のためお使いのサポート会社にもご確認ください。"}},{"@type":"Question","name":"ファストカルテの月額はいくらですか？","acceptedAnswer":{"@type":"Answer","text":"月18,000円を予定しています。先行導入の院とのご相談を経て決めます。"}},{"@type":"Question","name":"すぐに本番で使えますか？","acceptedAnswer":{"@type":"Answer","text":"いまは架空の記録での試用と、先行導入の受付の段階です。院のORCAとの接続の試験を経てから、実際の運用に進みます。"}},{"@type":"Question","name":"オンプレミス（院内のサーバー）のORCAでも使えますか？","acceptedAnswer":{"@type":"Answer","text":"ファストカルテはクラウドで動くため、院内のネットワークにあるORCAにつなぐには、院のVPNや院内に置く中継などの仕組みが要ります。この仕組みはまだ無く、先行導入の院と一緒に決めます。"}},{"@type":"Question","name":"WebORCA（クラウド版）でも使えますか？","acceptedAnswer":{"@type":"Answer","text":"WebORCAクラウドのクライアント証明書には対応しました。ただし本物のORCAとはまだつないでいないため、ORCAの試用環境で確かめてから提供します。"}},{"@type":"Question","name":"開発者に院で働きながら直してもらえますか？","acceptedAnswer":{"@type":"Answer","text":"できます。開発者の医師が院に勤務し、診療の現場で使いながら、その院に合うようにカルテを直していくこともできます。勤務の日数や内容は、ご相談のうえで決めます。"}},{"@type":"Question","name":"どんな診療所が対象ですか？","acceptedAnswer":{"@type":"Answer","text":"ORCAをお使いの無床の診療所です。内科をはじめ、外来中心の院を想定しています。"}}]}]}</script>
 </head><body>
 <div class="wrap">
 <nav><a class="logo" href="./"><img src="../img/fastkarte-logo.svg" alt="ファストカルテ"><span>診療所向け</span></a><a class="btn sm" href="#apply"><span class="pc">先行導入を</span>申し込む</a></nav>
@@ -115,14 +115,15 @@ footer{padding:26px 0;color:var(--sub);font-size:13px;border-top:1px solid var(-
 
 <section class="sec" id="orca">
  <h2><small>ORCA</small>ORCAとのつなぎ方</h2>
- <p class="intro">受付から会計まで、ORCAとファストカルテのあいだで情報を受け渡します。二重入力を減らすための仕組みです。</p>
+ <p class="intro">会計の画面に、ORCAとの受け渡しのボタンがあります。二重入力を減らすための仕組みです。<span class="nw">ORCAへ送るのは</span>医事課の役割の人で、送った記録は監査ログに残ります。</p>
  <ol class="flow">
-  <li><b>患者・保険の取り込み</b><span>ORCAに登録してある患者と保険の情報を、ファストカルテに取り込めるようにします。</span></li>
-  <li><b>受付の登録</b><span>ファストカルテでの受付を、ORCAの受付に登録できるようにします。</span></li>
-  <li><b>診療行為と病名を送る</b><span>カルテで入れた診療行為と病名を、ORCAへ中途データとして送れるようにします。</span></li>
-  <li><b>会計を見る</b><span>ORCAで計算した会計を、ファストカルテの画面で確かめられるようにします。</span></li>
+  <li><b>送る内容を見る</b><span>ORCAへ送る前に、送る診療行為と病名、ORCAに任せるもの（理由つき）を画面で確かめられます。見本（ログインなし）でも見られます。</span></li>
+  <li><b>ORCAの患者を確かめる</b><span>ORCAの患者番号を入れると、ORCAの患者がこのカルテの人と合っているかを確かめます（違えば送れません）。</span></li>
+  <li><b>受付を送る</b><span>ファストカルテでの受付を、ORCAの受付に登録します。</span></li>
+  <li><b>診療行為を送る</b><span>カルテで入れた診療行為を、ORCAへ中途データとして送ります。今日つけた病名も一緒に送れます。点数はORCAが計算し、<span class="nw">処方箋料</span>・<span class="nw">判断料</span>・<span class="nw">外来管理加算</span>などはORCAに任せます。画像診断はORCA側で入れます。</span></li>
+  <li><b>ORCAの会計を読む</b><span>ORCAで計算した会計を、ファストカルテの会計の画面で確かめます。ORCAの点数と、ファストカルテの画面の点数を並べて比べます。</span></li>
  </ol>
- <p class="status"><b>いまの段階：</b>4つの受け渡しの口は、サーバーの中に作ってあります。画面からの操作と、実際のORCAとの接続試験は、これから先行導入の院と進めます。オンプレミス（院内のサーバー）のORCAは、ファストカルテがクラウドで動くため、院内からつなぐ仕組み（院のVPNや院内に置く中継など）が要ります。この仕組みは先行導入の院と決めます（いまは未対応）。WebORCAクラウドのクライアント証明書にも、まだ対応していません。</p>
+ <p class="status"><b>いまの段階：</b>本物のORCA（試用環境を含む）とは、まだ一度もつないでいません。ORCAの試用環境で確かめてから提供します。WebORCAクラウドのクライアント証明書には対応しました。オンプレミス（院内のサーバー）のORCAは、ファストカルテがクラウドで動くため、院のVPNや院内に置く中継が要ります。この仕組みはまだ無く、先行導入の院と一緒に決めます（いまは未対応）。</p>
 </section>
 
 <section class="sec" id="feature">
@@ -137,7 +138,7 @@ footer{padding:26px 0;color:var(--sub);font-size:13px;border-top:1px solid var(-
   <div class="f"><b>カルテ要約（AIの下書き）</b><p>文ごとに、もとの記録のどの行から書いたかを示します。数や薬の名前がもとの行に無い文は出しません。氏名・患者番号・電話・日付・住所は置き換えてから、外部のAIサービス（Anthropic の Claude）に送ります。見本ではAIは動きません。</p></div>
   <div class="f"><b>院のセキュリティ点検</b><p>厚生労働省のチェックリストに沿って、院の状況を点検できます。</p></div>
   <div class="f"><b>予防接種</b><p>予診（体温・予診票）と、販売名・ロットの記録。体温37.5℃以上のときや、注射の生ワクチンの間隔（27日）が足りないときなどは、記録できないように止めます。</p></div>
-  <div class="f"><b>健診</b><p>定期・雇入時の健康診断と、特定健診・後期高齢者の健診の結果を入れ、医師が判定します。健診の検査は保険の請求に入れません。特定健診のXML（代行機関への提出）と保健指導の階層化は、これから対応します。</p></div>
+  <div class="f"><b>健診</b><p>健診のコース（定期健康診断・雇入時・特定健診・後期高齢者・自費）を選ぶだけでオーダーできます。料金はコースごとに設定します（導入のときに院の価格に合わせます）。会計では保険の分とは別に自費として受け取り、健診だけの受診では保険の初診料・再診料を算定しません。身体診察はテンプレート「健診の診察」で書きます。身長・体重・血圧・血液検査の値はカルテから読み込みます（視力・聴力・尿・胸部X線などは、いまは判定だけを記録）。判定は医師が選びます。特定健診のXML（代行機関への提出）と保健指導の階層化は、これから対応します。</p></div>
  </div>
 </section>
 
@@ -178,7 +179,7 @@ footer{padding:26px 0;color:var(--sub);font-size:13px;border-top:1px solid var(-
   <details><summary>ファストカルテの月額はいくらですか？</summary><p>月18,000円を予定しています。先行導入の院とのご相談を経て決めます。</p></details>
   <details><summary>すぐに本番で使えますか？</summary><p>いまは架空の記録での試用と、先行導入の受付の段階です。院のORCAとの接続の試験を経てから、実際の運用に進みます。</p></details>
   <details><summary>オンプレミス（院内のサーバー）のORCAでも使えますか？</summary><p>ファストカルテはクラウドで動くため、院内のネットワークにあるORCAにつなぐには、院のVPNや院内に置く中継などの仕組みが要ります。この仕組みはまだ無く、先行導入の院と一緒に決めます。</p></details>
-  <details><summary>WebORCA（クラウド版）でも使えますか？</summary><p>WebORCAクラウドのクライアント証明書には、まだ対応していません。対応の予定は、ご相談のときにお伝えします。</p></details>
+  <details><summary>WebORCA（クラウド版）でも使えますか？</summary><p>WebORCAクラウドのクライアント証明書には対応しました。ただし本物のORCAとはまだつないでいないため、ORCAの試用環境で確かめてから提供します。</p></details>
   <details><summary>開発者に院で働きながら直してもらえますか？</summary><p>できます。開発者の医師が院に勤務し、診療の現場で使いながら、その院に合うようにカルテを直していくこともできます。勤務の日数や内容は、ご相談のうえで決めます。</p></details>
   <details><summary>どんな診療所が対象ですか？</summary><p>ORCAをお使いの無床の診療所です。内科をはじめ、外来中心の院を想定しています。</p></details>
  </div>
