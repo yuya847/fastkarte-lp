@@ -76,7 +76,7 @@ h2{font-size:34px;font-weight:900;line-height:1.5;margin:0 0 14px;color:var(--ma
 .tbl .fk{background:#fff6f4;font-weight:900;color:var(--ink)}
 .tbl thead .fk{background:var(--red);color:#fff}
 .tbl tr:last-child th,.tbl tr:last-child td{border-bottom:0}
-.tbl small{display:block;font-size:11.5px;font-weight:500;color:var(--sub);line-height:1.5}
+.tbl small{display:block;font-size:11.5px;font-weight:500;color:var(--sub);line-height:1.5}.tbl .o{color:var(--main);font-size:18px;line-height:1.2}.tbl .x{color:var(--sub);font-weight:700}.tbl .n{color:#98a3a9;font-size:12.5px}.tbl .w{color:#a0522d;font-weight:700}.feat-tbl{table-layout:fixed}.feat-tbl td{font-size:14px;vertical-align:middle;overflow-wrap:anywhere}.feat-tbl tbody th{width:auto}.feat-tbl tbody th{line-height:1.5}
 .note{font-size:12.5px;color:var(--sub);margin:12px 0 0}
 .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:f;list-style:none;padding:0;margin:0}
 .flow li{counter-increment:f;background:#fff;border-radius:14px;padding:20px 18px;box-shadow:0 12px 30px -22px rgba(23,36,43,.35)}
@@ -136,7 +136,7 @@ footer{padding:28px 0;color:var(--sub);font-size:13px;border-top:1px solid var(-
  .point{padding:22px 20px}.point h3{font-size:19px}
  .plan{padding:22px 18px 18px}.plan .price{font-size:42px}.plan dl div{grid-template-columns:1fr;gap:0}
  .change{padding:20px 18px}.change .row{grid-template-columns:1fr;gap:2px}
- .tbl{font-size:13px}.tbl th,.tbl td{padding:10px 5px}.tbl thead th{font-size:12.5px}.tbl tbody th{font-size:12px;width:21%}.tbl small{font-size:10.5px}
+ .feat-tbl td{font-size:12px;padding:8px 3px}.feat-tbl tbody th{font-size:11.5px;padding:8px 4px 8px 8px}.feat-tbl thead th{font-size:11.5px;padding:10px 2px}.feat-tbl small{font-size:10px}.tbl .n{font-size:11px} .tbl{font-size:13px}.tbl th,.tbl td{padding:10px 5px}.tbl thead th{font-size:12.5px}.tbl tbody th{font-size:12px;width:21%}.tbl small{font-size:10.5px}
  .flow,.flow.four{grid-template-columns:1fr}.flow li{display:grid;grid-template-columns:30px 1fr;column-gap:12px;padding:14px 16px}.flow li:before{margin:2px 0 0;grid-row:1/3}
  .feat{grid-template-columns:1fr}.feat .f{padding:16px 18px}.feat .f b{font-size:16px}
  .dev{grid-template-columns:1fr;gap:20px}.dev .big{font-size:17px;font-weight:700}.dev figure{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center}.dev figcaption{margin:0}
@@ -226,6 +226,34 @@ footer{padding:28px 0;color:var(--sub);font-size:13px;border-top:1px solid var(-
    </tbody>
   </table>
   <p class="note">A社・B社は、ORCAを使い続けてカルテだけを入れるプランの金額です。各社の公式サイトの料金ページの表示によります（2026年11月13日時点。税の表示はありません）。ファストカルテは税抜で、2027年3月末までのお申し込みの金額です。ORCAの費用は、どの社でも別にかかります。機能やサポートの内容は各社で違います。</p>
+ </div>
+
+ <div class="cmp" id="compare">
+  <h3>機能の比べ</h3>
+  <table class="tbl feat-tbl">
+   <colgroup><col style="width:25%"><col><col><col></colgroup>
+   <thead><tr><th scope="col"></th><th scope="col">A社</th><th scope="col">B社</th><th scope="col" class="fk"><span class="nw">ファスト</span><span class="nw">カルテ</span></th></tr></thead>
+   <tbody>
+    <tr><th scope="row">ORCAと組み合わせ</th><td><b class="o">○</b><small>WebORCA</small></td><td><b class="o">○</b><small>WEB ORCA</small></td><td class="fk"><span class="w">準備中</span><small>ORCAの試用環境で確かめてから提供</small></td></tr>
+    <tr><th scope="row">患者のWeb予約</th><td><b class="o">○</b><small>別サービス・有料</small></td><td><b class="o">○</b></td><td class="fk"><span class="x">無い</span><small>院内の予約の管理はあり</small></td></tr>
+    <tr><th scope="row">Web問診</th><td><b class="o">○</b><small>別サービス・有料</small></td><td><b class="o">○</b></td><td class="fk"><span class="x">無い</span></td></tr>
+    <tr><th scope="row">処方の安全チェック</th><td><b class="o">○</b><small>有料オプション</small></td><td><b class="o">○</b></td><td class="fk"><b class="o">○</b></td></tr>
+    <tr><th scope="row">紹介状・診断書などの文書</th><td><b class="o">○</b></td><td><b class="o">○</b></td><td class="fk"><b class="o">○</b></td></tr>
+    <tr><th scope="row">電子同意書（患者の署名）</th><td><span class="n">記載なし</span></td><td><span class="n">記載なし</span></td><td class="fk"><b class="o">○</b></td></tr>
+    <tr><th scope="row">検査結果</th><td><b class="o">○</b><small>取り込み・表示</small></td><td><b class="o">○</b><small>取り込み・表示</small></td><td class="fk"><b class="o">○</b><small>表示のみ。自動の取り込みは無い</small></td></tr>
+    <tr><th scope="row">オンライン資格確認</th><td><b class="o">○</b></td><td><b class="o">○</b><small>有料</small></td><td class="fk"><span class="w">準備中</span></td></tr>
+    <tr><th scope="row">電子処方箋</th><td><b class="o">○</b></td><td><b class="o">○</b><small>有料</small></td><td class="fk"><span class="w">準備中</span></td></tr>
+    <tr><th scope="row">オンライン診療</th><td><b class="o">○</b><small>別サービス</small></td><td><b class="o">○</b></td><td class="fk"><span class="x">無い</span></td></tr>
+    <tr><th scope="row">AIの記載の支援</th><td><b class="o">○</b><small>有料。会話からSOAP</small></td><td><b class="o">○</b><small>会話からSOAPは有料</small></td><td class="fk"><b class="o">○</b><small>カルテ要約・オーダーの下書き・説明と同意の音声の記録</small></td></tr>
+    <tr><th scope="row">iPadでの手書き</th><td><b class="o">○</b><small>有料</small></td><td><span class="n">記載なし</span></td><td class="fk"><span class="w">一部</span><small>同意書の署名のみ</small></td></tr>
+    <tr><th scope="row">スマホでの利用</th><td><b class="o">○</b><small>iPhone・閲覧が中心</small></td><td><span class="w">一部</span><small>経営分析のみ</small></td><td class="fk"><span class="x">無い</span></td></tr>
+    <tr><th scope="row">統計・経営分析</th><td><b class="o">○</b></td><td><b class="o">○</b></td><td class="fk"><b class="o">○</b></td></tr>
+    <tr><th scope="row">予防接種・健診の記録</th><td><span class="n">記載なし</span></td><td><span class="n">記載なし</span></td><td class="fk"><b class="o">○</b></td></tr>
+    <tr><th scope="row">院ごとの個別の作り込み</th><td><span class="x">しない</span><small>メーカーのヘルプの記載</small></td><td><span class="n">記載なし</span></td><td class="fk"><b class="o">○</b><small>開発者が院に合わせて直す</small></td></tr>
+    <tr><th scope="row">サポート</th><td>電話<small>平日。訪問は別プラン</small></td><td>電話<small>平日。導入時の訪問あり</small></td><td class="fk">チャット24時間<small>電話・訪問は日程によりご相談</small></td></tr>
+   </tbody>
+  </table>
+  <p class="note">A社・B社は、ORCAと組み合わせるプラン（A社はORCA連動型、B社は通常プラン）についての、各社の公式サイトとメーカーのヘルプセンターの記載によります（2026年11月13日時点）。「記載なし」は記載を確認できなかったという意味で、その機能が無いという意味ではありません。ファストカルテの「無い」は、いまの製品に無い機能です。「準備中」は、画面はあっても本物の仕組みにはまだつないでいないものです。</p>
  </div>
 </div></section>
 
