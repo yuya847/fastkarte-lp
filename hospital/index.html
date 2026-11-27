@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>病棟の電子カルテを、医師が現場で共同開発｜ファストカルテ（病院・病棟向け）</title>
+<meta name="description" content="中小病院の病棟向けの電子カルテ。話した指示をAIがオーダーの下書きにし、計算と確認はプログラムが行い、確定するのは医師。医師・看護師・薬剤師・医事課など13の職種が同じ記録を使い、入院の算定とレセプトの点検まで同じカルテの中に作っています。開発者の医師が非常勤として病院で働きながら、院に合わせて直していく共同開発の病院を募集しています。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://fastkarte.com/hospital/">
+<link rel="icon" href="../img/logo.svg" type="image/svg+xml">
+<meta property="og:type" content="website"><meta property="og:url" content="https://fastkarte.com/hospital/"><meta property="og:title" content="病棟の電子カルテを、医師が現場で共同開発｜ファストカルテ（病院・病棟向け）"><meta property="og:description" content="話した指示がオーダーの下書きに。13の職種が同じ記録を使う、病棟の電子カルテ。開発者の医師が病院で働きながら直していく、共同開発の病院を募集しています。"><meta property="og:image" content="https://fastkarte.com/hospital/img/drafts.jpg"><meta property="og:site_name" content="ファストカルテ"><meta property="og:locale" content="ja_JP"><meta name="twitter:card" content="summary_large_image"><link rel="alternate" type="text/plain" href="https://fastkarte.com/llms.txt" title="llms.txt">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--gray:#f3f5f6;--ink:#17242b;--sub:#5d6a71;--line:#dfe4e7;--main:#1f5470;--main2:#163f55;--soft:#e8f0f4;--red:#c0392b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",sans-serif;line-height:1.85;word-break:auto-phrase}
+.wrap{max-width:1140px;margin:0 auto;padding:0 40px}
+a{color:inherit}.nw{display:inline-block}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+header .wrap{display:flex;align-items:center;gap:22px;height:68px}
+.logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto}.logo img{height:28px}.logo span{font-size:12px;font-weight:700;color:var(--main);background:var(--soft);padding:2px 10px;border-radius:99px;white-space:nowrap}
+.gnav{display:flex;gap:20px;font-size:14px;font-weight:700}.gnav a{text-decoration:none;color:var(--main2)}
+.hbtn{display:inline-block;background:var(--main);color:#fff;font-weight:700;font-size:14px;text-decoration:none;padding:10px 18px;border-radius:99px;white-space:nowrap}
+.pill{display:inline-flex;align-items:center;justify-content:space-between;gap:14px;min-width:280px;padding:18px 28px;border-radius:99px;font-weight:700;font-size:16px;text-decoration:none;box-shadow:0 10px 24px -12px rgba(23,36,43,.45);transition:transform .08s,opacity .15s;border:0;cursor:pointer;font-family:inherit}
+.pill:active{transform:scale(.98);opacity:.85}
+.pill.solid{background:var(--main);color:#fff}.pill.white{background:#fff;color:var(--main2)}
+.pill .chip{font-size:12px;background:var(--soft);color:var(--main2);padding:2px 10px;border-radius:6px;white-space:nowrap}
+.pill.solid .chip{background:#fff}
+.pill .ar{font-size:18px;line-height:1}
+.hero{background:var(--gray);padding:64px 0 72px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center}
+.eyebrow{font-size:14px;font-weight:700;color:var(--main)}
+h1{font-size:50px;font-weight:900;line-height:1.38;letter-spacing:.02em;margin:10px 0 18px;color:var(--main2)}
+h1 em{font-style:normal;color:var(--red)}
+.lead{font-size:16px;color:#33434b;margin:0 0 22px}
+.offer{display:inline-grid;grid-template-columns:auto 1fr;gap:4px 16px;align-items:baseline;background:#fff;border:2px solid var(--red);border-radius:14px;padding:14px 20px;margin-bottom:24px}
+.offer .lim{grid-column:1/-1;font-size:13px;font-weight:700;color:#fff;background:var(--red);justify-self:start;padding:1px 10px;border-radius:99px}
+.offer dt{font-size:13px;font-weight:700;color:var(--sub)}.offer dd{margin:0;font-weight:900;font-size:15px}
+.offer dd b{font-size:30px;color:var(--red);letter-spacing:.01em}
+.offer dd small{font-size:12px;font-weight:500;color:var(--sub)}
+.ctas{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.stage{margin:18px 0 0;font-size:13px;color:var(--sub)}
+.visual{position:relative;padding-bottom:16%}
+.visual img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;box-shadow:0 30px 60px -30px rgba(23,36,43,.5)}
+.visual .sub{position:absolute;width:56%;right:-4%;bottom:0}
+.visual figcaption{position:absolute;left:0;bottom:-4px;font-size:12px;color:var(--sub)}
+.sec{padding:88px 0}.sec.gray{background:var(--gray)}
+.label{display:flex;align-items:center;gap:14px;font-size:13px;font-weight:700;letter-spacing:.12em;color:#8a969c;margin:0 0 6px}.label:after{content:"";height:1px;width:120px;background:#c9d1d5}
+h2{font-size:34px;font-weight:900;line-height:1.5;margin:0 0 14px;color:var(--main2)}
+.intro{font-size:16px;color:#33434b;margin:0 0 34px;max-width:46em}
+.points{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.point{background:#fff;border-radius:16px;padding:28px 26px;box-shadow:0 14px 34px -22px rgba(23,36,43,.35)}
+.point .no{font-size:13px;font-weight:900;color:var(--main);letter-spacing:.1em}
+.point h3{font-size:21px;font-weight:900;line-height:1.5;margin:6px 0 10px;color:var(--main2)}
+.point p{margin:0;font-size:14.5px;color:#33434b}
+.point.red h3{color:var(--red)}
+.plans{display:grid;grid-template-columns:1.1fr 1fr;gap:26px;align-items:start}
+.plan{background:#fff;border:2px solid var(--main);border-radius:18px;padding:30px 30px 26px}
+.plan .tag{display:inline-block;font-size:14px;font-weight:700;color:var(--main2);border:1.5px solid var(--main);border-radius:99px;padding:2px 16px}
+.plan .price{font-size:52px;font-weight:900;color:var(--main2);line-height:1.2;margin:10px 0 2px}.plan .price span{font-size:20px}.plan .price small{font-size:14px;font-weight:700;color:var(--sub);margin-left:6px}.plan .price small .nw{font-size:inherit}
+.plan .forever{display:inline-block;font-weight:900;color:#fff;background:var(--red);border-radius:8px;padding:3px 12px;font-size:15px}
+.plan dl{margin:20px 0 0;border-top:1px solid var(--line)}
+.plan dl div{display:grid;grid-template-columns:8.5em 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.plan dt{font-weight:700;color:var(--sub)}.plan dd{margin:0}.plan dd b{font-size:20px;font-weight:900}
+.change{background:#fff;border-radius:18px;padding:26px 26px 22px;box-shadow:0 14px 34px -22px rgba(23,36,43,.35)}
+.change h3{margin:0 0 14px;font-size:18px;font-weight:900;color:var(--main2)}
+.change .row{display:grid;grid-template-columns:5em 1fr;gap:10px;align-items:center;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+.change .row:last-of-type{border-bottom:0}
+.change .k{font-weight:700;color:var(--sub)}
+.change .now{display:inline-block;background:var(--gray);border-radius:6px;padding:2px 10px;margin:2px 6px 2px 0}
+.change .add{display:inline-block;background:#fdecea;color:var(--red);font-weight:900;border-radius:6px;padding:2px 10px}
+.change p{margin:12px 0 0;font-size:13px;color:var(--sub)}
+.cmp{margin-top:44px}
+.cmp h3{font-size:20px;font-weight:900;color:var(--main2);margin:0 0 14px}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px -24px rgba(23,36,43,.35);font-size:15px}
+.tbl th,.tbl td{padding:14px 12px;text-align:center;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.tbl thead th{background:#eef2f4;font-size:14px;color:var(--main2)}
+.tbl tbody th{text-align:left;font-size:13.5px;color:var(--sub);font-weight:700;width:22%}
+.tbl .fk{background:#fff6f4;font-weight:900;color:var(--ink)}
+.tbl thead .fk{background:var(--red);color:#fff}
+.tbl tr:last-child th,.tbl tr:last-child td{border-bottom:0}
+.tbl small{display:block;font-size:11.5px;font-weight:500;color:var(--sub);line-height:1.5}.tbl .o{color:var(--main);font-size:18px;line-height:1.2}.tbl .x{color:var(--sub);font-weight:700}.tbl .n{color:#98a3a9;font-size:12.5px}.tbl .w{color:#a0522d;font-weight:700}.feat-tbl{table-layout:fixed}.feat-tbl td{font-size:14px;vertical-align:middle;overflow-wrap:anywhere}.feat-tbl tbody th{width:auto}.feat-tbl tbody th{line-height:1.5}
+.note{font-size:12.5px;color:var(--sub);margin:12px 0 0}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:f;list-style:none;padding:0;margin:0}
+.flow li{counter-increment:f;background:#fff;border-radius:14px;padding:20px 18px;box-shadow:0 12px 30px -22px rgba(23,36,43,.35)}
+.flow li:before{content:counter(f);display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--main);color:#fff;font-weight:900;font-size:14px;margin-bottom:8px}
+.flow b{display:block;font-size:16px;font-weight:900;color:var(--main2)}.flow span{font-size:13.5px;color:#33434b}
+.flow.four{grid-template-columns:repeat(4,1fr)}.dev-steps{margin:0 0 40px}
+.status{margin-top:20px;background:#fff;border-left:5px solid var(--red);border-radius:10px;padding:16px 20px;font-size:14px;color:#33434b}
+.status b{color:var(--ink)}
+.feat{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.feat .f p{word-break:auto-phrase}
+.feat .f{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.feat .f b{display:block;font-size:17px;font-weight:900;color:var(--main2);margin-bottom:4px}.feat .f p{margin:0;font-size:14px;color:#33434b}
+.dev{display:grid;grid-template-columns:300px 1fr;gap:44px;align-items:start}
+.dev figure{margin:0}.dev img{display:block;width:100%;height:auto;border-radius:16px}
+.dev figcaption{margin-top:12px;font-size:14px;color:var(--sub)}.dev figcaption b{display:block;font-size:20px;font-weight:900;color:var(--ink)}
+.dev .big{font-size:22px;font-weight:900;line-height:1.6;color:var(--main2);margin:0 0 14px}
+.dev p{font-size:15px;color:#33434b;margin:0 0 14px}
+.onsite{background:#fff6f4;border:2px solid var(--red);border-radius:14px;padding:18px 20px;margin:18px 0}
+.onsite b{display:block;color:var(--red);font-weight:900;font-size:17px;margin-bottom:4px}.onsite>span{font-size:14.5px;color:#33434b}
+.cv{display:grid;grid-template-columns:7em 1fr;gap:4px 14px;margin:6px 0 0;font-size:13.5px;color:#33434b}.cv dt{font-weight:700;color:var(--sub)}.cv dd{margin:0}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:28px}.shots .wide{grid-column:1/-1}
+.shots figure{margin:0}.shots img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;box-shadow:0 24px 50px -30px rgba(23,36,43,.45)}
+.shots figcaption{font-size:13.5px;color:var(--sub);margin-top:10px}.shots figcaption b{font-size:16px;color:var(--ink);margin-right:8px}
+.upd{background:var(--main2);color:#fff;border-radius:18px;padding:34px 36px}
+.upd ol{list-style:none;margin:0;padding:0}
+.upd li{display:grid;grid-template-columns:7em 1fr;gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.25);font-size:15px}
+.upd li:last-child{border-bottom:0}.upd time{font-weight:700;opacity:.8}
+.faq{background:#fff;border-radius:18px;padding:10px 30px;box-shadow:0 14px 34px -24px rgba(23,36,43,.35)}
+.faq details{border-bottom:1px solid var(--line)}.faq details:last-child{border-bottom:0}
+.faq summary{font-weight:700;cursor:pointer;list-style:none;padding:20px 40px 20px 0;position:relative;font-size:16px}.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"＋";position:absolute;right:4px;top:19px;color:var(--main);font-weight:900}.faq details[open] summary:after{content:"−"}
+.faq p{margin:0 0 20px;font-size:15px;color:#33434b}
+.final{text-align:center;padding:88px 0;background:var(--gray)}
+.final h2{margin:0 0 10px}
+.final .sub{color:var(--sub);margin:0 0 28px}
+.final .ctas{align-items:center}
+.ask{max-width:600px;margin:30px auto 0;text-align:left;background:#fff;border-radius:18px;padding:30px 30px 24px;display:flex;flex-direction:column;gap:6px;box-shadow:0 14px 34px -24px rgba(23,36,43,.35)}
+.ask label{font-weight:700;font-size:14px;margin-top:8px}.ask .req{display:inline-block;margin-left:8px;font-size:11px;color:#fff;background:var(--red);border-radius:4px;padding:0 6px;line-height:1.7;vertical-align:1px}
+.ask input[type=text],.ask input[type=email],.ask textarea{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid var(--line);background:var(--gray);color:var(--ink);border-radius:10px;caret-color:var(--main)}
+.ask input:focus,.ask textarea:focus{outline:none;border-color:var(--main);background:#fff}
+.ask fieldset{border:0;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}.ask legend{font-weight:700;font-size:14px;padding:0;margin-bottom:4px}
+.ask .chk{display:flex;gap:10px;align-items:center;font-weight:500;margin:0;padding:11px 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--gray);cursor:pointer}
+.ask .chk input{width:20px;height:20px;margin:0;flex:none;accent-color:var(--main)}.ask .chk:has(input:checked){border-color:var(--main);background:#fff}
+.ask-btn{margin-top:16px;justify-content:center;width:100%}.ask-btn:disabled{opacity:.6}
+.ask-err{margin:6px 0 0;color:var(--red);font-size:14px;font-weight:700}
+.ask-note{margin:10px 0 0;font-size:12px;color:var(--sub)}
+.ask-done{max-width:600px;margin:30px auto 0;background:#fff;border:2px solid var(--main);border-radius:18px;padding:30px 26px}.ask-done p{margin:0 0 16px;color:#33434b}
+.alt{margin-top:20px;font-size:13px;color:var(--sub)}.alt a{display:inline-block;font-weight:700;color:var(--ink);padding:6px 0}
+footer{padding:28px 0;color:var(--sub);font-size:13px;border-top:1px solid var(--line)}
+.fixbar{display:none}
+@media(max-width:960px){.gnav{display:none}.hero .wrap{grid-template-columns:1fr}.plans{grid-template-columns:1fr}.points{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.flow li:last-child:nth-child(odd){grid-column:1/-1}.flow.four{grid-template-columns:1fr 1fr}.dev{grid-template-columns:220px 1fr;gap:28px}}
+@media(max-width:760px){
+ .wrap{padding:0 16px}header .wrap{height:56px}.logo img{height:22px}.logo span{font-size:11px;padding:1px 8px}.hbtn{padding:8px 14px;font-size:13px}
+ .hero{padding:30px 0 40px}h1{font-size:31px}.lead{font-size:15px}
+ .offer{display:grid;padding:12px 16px}.offer dd b{font-size:26px}
+ .ctas{align-items:stretch}.pill{min-width:0;width:100%;padding:16px 22px;font-size:15.5px}
+ .sec{padding:56px 0}h2{font-size:24px}.intro{font-size:14.5px;margin-bottom:24px}.label:after{width:60px}
+ .point{padding:22px 20px}.point h3{font-size:19px}
+ .plan{padding:22px 18px 18px}.plan .price{font-size:42px}.plan dl div{grid-template-columns:1fr;gap:0}
+ .change{padding:20px 18px}.change .row{grid-template-columns:1fr;gap:2px}
+ .feat-tbl td{font-size:12px;padding:8px 3px}.feat-tbl tbody th{font-size:11.5px;padding:8px 4px 8px 8px}.feat-tbl thead th{font-size:11.5px;padding:10px 2px}.feat-tbl small{font-size:10px}.tbl .n{font-size:11px} .tbl{font-size:13px}.tbl th,.tbl td{padding:10px 5px}.tbl thead th{font-size:12.5px}.tbl tbody th{font-size:12px;width:21%}.tbl small{font-size:10.5px}
+ .flow,.flow.four{grid-template-columns:1fr}.flow li{display:grid;grid-template-columns:30px 1fr;column-gap:12px;padding:14px 16px}.flow li:before{margin:2px 0 0;grid-row:1/3}
+ .feat{grid-template-columns:1fr}.feat .f{padding:16px 18px}.feat .f b{font-size:16px}
+ .dev{grid-template-columns:1fr;gap:20px}.dev .big{font-size:17px;font-weight:700}.dev figure{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center}.dev figcaption{margin:0}
+ .shots{grid-template-columns:1fr;gap:22px}
+ .upd{padding:22px 20px}.upd li{grid-template-columns:1fr;gap:0;font-size:14.5px}
+ .faq{padding:4px 18px}.faq summary{font-size:15px}
+ .final{padding:56px 0 64px}.ask{padding:22px 18px 18px}
+ body{padding-bottom:76px}
+ .fixbar{display:grid;grid-template-columns:1fr 1.2fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom))}
+ .fixbar a{display:flex;align-items:center;justify-content:center;border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;padding:12px 6px;white-space:nowrap}
+ .fixbar .a1{background:#fff;color:var(--main2);border:1.5px solid var(--main)}.fixbar .a2{background:var(--main);color:#fff}
+ .pc{display:none}
+}
+.offer.co dd b{font-size:24px}
+.roles{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 0;padding:0;list-style:none}.roles li{background:#fff;border:1px solid var(--line);border-radius:99px;padding:4px 14px;font-size:13.5px;font-weight:700;color:var(--main2)}
+.shots .phone img{max-width:300px;margin:0 auto}
+@media(max-width:760px){.offer.co dd b{font-size:21px}.roles{gap:6px;margin-top:20px}.roles li{font-size:12.5px;padding:3px 10px}.shots .phone img{max-width:240px}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://fastkarte.com/#org","name":"合同会社鈴木医工","url":"https://suzuki-medical-engineering.work/"},{"@type":"Person","@id":"https://fastkarte.com/#founder","name":"鈴木 雄哉","jobTitle":"医師・合同会社鈴木医工 代表社員","worksFor":{"@id":"https://fastkarte.com/#org"}},{"@type":"SoftwareApplication","@id":"https://fastkarte.com/hospital/#app","name":"ファストカルテ（病院・病棟向け）","applicationCategory":"BusinessApplication","applicationSubCategory":"電子カルテ","operatingSystem":"Web（ブラウザ）","url":"https://fastkarte.com/hospital/","inLanguage":"ja","description":"中小病院の病棟向けの電子カルテ。医師が話した（打った）指示を、AI（Anthropic 社の Claude）が薬・量・回数・時刻などの項目に分けてオーダーの下書きにし、点滴の速さや時刻の計算、重複・併用注意の確認はプログラムが行い、確定するのは医師。医師・看護師・薬剤師・臨床検査技師・診療放射線技師・療法士・管理栄養士・MSW・医事課・医師事務・臨床工学技士・ICT・歯科衛生士の13の職種が、同じ記録を自分の画面で使う。入院の算定（出来高・DPC）とレセプトのファイルの作成・点検も同じカルテの中に作っている。2026年11月時点で、架空の患者のデータで動かして確かめている段階で、共同開発の病院を募集している。病院での稼働の実績はまだない。開発者の医師が非常勤として病院に勤務し、現場で使いながら院に合わせて直していく形を想定している。費用の目安は月額50万円（税抜）で、病床数・使う部署・作り込みの範囲によって変わる。","publisher":{"@id":"https://fastkarte.com/#org"},"author":{"@id":"https://fastkarte.com/#founder"},"featureList":["話した（打った）指示からオーダーの下書き（AIは項目に分けるだけ、計算と確認はプログラム、確定は医師）","看護師のワークシートと指示受け（勤務帯ごと・A4横で印刷）","病棟マップとベッドの割り当て","申し送り（I-PASSの形）","入院時の評価と計画書の期限の管理","薬剤部（処方監査・疑義照会・持参薬鑑別・注射の払出とラベル）","検査室（検体の受付・結果の入力・パニック値・二段階の承認）","入院の算定（出来高・DPC）とレセプトのファイルの作成・点検（架空の記録で確かめている段階）","スマートフォンの画面（看護師・医師）","練習用の院","非常時に読むだけで使う画面（院内の端末に暗号化した写し）","FHIR R4（JP Core）とCSVでの書き出し"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"費用はいくらですか？","acceptedAnswer":{"@type":"Answer","text":"月額50万円（税抜）が目安です。病床数・使う部署・作り込みの範囲によって変わるため、うかがってからお見積もりします。はじめは1つの病棟・1つの部署の小さな範囲から始める形を想定しています。"}},{"@type":"Question","name":"すぐに本番で使えますか？","acceptedAnswer":{"@type":"Answer","text":"いまは架空の患者のデータで動かして確かめている段階で、共同開発の病院を募集しています。病院での稼働の実績はまだありません。共同開発の病院で、架空の記録での確認と院でのご確認を経てから、実際の患者さんの記録での運用に進みます。"}},{"@type":"Question","name":"いまの電子カルテを、すべて入れ替える必要がありますか？","acceptedAnswer":{"@type":"Answer","text":"はじめから全体を入れ替える前提ではありません。どの部署・どの業務から始めるかは、院の状況とお困りのことをうかがって、一緒に決めます。"}},{"@type":"Question","name":"医事会計（レセコン）はどうなりますか？","acceptedAnswer":{"@type":"Answer","text":"入院の算定（出来高・DPC）、レセプトのファイルの作成と点検、返戻・査定の取り込みまで、同じカルテの中に作っています。いまは架空の記録で確かめている段階で、実際の請求に使ったことはありません。オンライン請求への送信は、医事課が請求端末で行う形です（アプリからは送りません）。いまお使いのレセコンとのつなぎ方は、院の環境をうかがってご相談します。"}},{"@type":"Question","name":"AIに患者さんの記録を送りますか？","acceptedAnswer":{"@type":"Answer","text":"オーダーなどの下書きを作るときに、Anthropic 社のクラウドのAIサービス（Claude の API）へ送るのは、話した（打った）文と院内のマスター（薬や検査の一覧）です。氏名・生年月日・患者IDは送りません。お薬手帳の写真は、利用者が四角で囲んだ薬の行だけを送ります。話した文の中に名前が入っていれば、そのまま送られます。重複や腎機能などの確認は、AIではなくプログラムで行います。"}},{"@type":"Question","name":"停電やサーバーの障害のときはどうなりますか？","acceptedAnswer":{"@type":"Answer","text":"院内の登録した端末が、記録の写しを暗号化して持ちます（15分ごとに更新し、72時間で消します）。サーバーが使えないときや、管理者が非常時を宣言したときは、職員番号と非常時のPINで入る、読むだけの画面で記録を見られます。誰が・なぜ・どの患者を見たかを記録し、戻ったあとでサーバーの監査ログに送ります。"}},{"@type":"Question","name":"開発者の医師が勤務するとは、どういうことですか？","acceptedAnswer":{"@type":"Answer","text":"開発者の医師（総合診療科）が非常勤の医師として院に勤務し、診療をしながら、医師・看護師・医事課の皆さまの使い方を見て、カルテを院に合わせて直していきます。勤務の日数や内容は、ご相談のうえで決めます。"}},{"@type":"Question","name":"どんな病院が対象ですか？","acceptedAnswer":{"@type":"Answer","text":"一般病棟・地域包括ケア病棟・回復期リハビリテーション病棟・療養病棟などをお持ちの、中小規模の病院を想定しています。"}}]}]}</script>
+</head><body>
+<header><div class="wrap">
+ <a class="logo" href="./"><img src="../img/fastkarte-logo.svg" alt="ファストカルテ"><span>病院・病棟向け</span></a>
+ <nav class="gnav" aria-label="ページ内"><a href="#point">特長</a><a href="#feature">機能</a><a href="#screen">画面</a><a href="#dev">共同開発</a><a href="#faq">よくある質問</a></nav>
+ <a class="hbtn" href="#apply"><span class="pc">共同開発を</span>相談する</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+ <div>
+  <div class="eyebrow">中小病院の病棟の皆さまへ</div>
+  <h1>病棟のカルテを、<br><span class="nw">医師が<em>現場で</em></span><span class="nw">直します。</span></h1>
+  <p class="lead">話した指示が、オーダーの下書きに。医師・看護師・薬剤師・医事課が、同じ記録を自分の画面で使う病棟の電子カルテです。開発者の医師が非常勤として病院で働きながら、院に合わせて直していきます。</p>
+  <dl class="offer co">
+   <dd class="lim">共同開発の病院を募集しています</dd>
+   <dt>はじめは</dt><dd><b>1病棟・1部署</b>から</dd>
+   <dt>費用の目安</dt><dd>月額<b>50万円</b><small>（税抜）</small><br><small>病床数・範囲によって変わります</small></dd>
+  </dl>
+  <div class="ctas">
+   <a class="pill solid" href="#apply">共同開発を相談する<span class="ar">→</span></a>
+  </div>
+  <p class="stage">いまは架空の患者のデータで動かして確かめている段階で、共同開発の病院を募集しています。病院での稼働の実績はまだありません。</p>
+ </div>
+ <figure class="visual" style="margin:0">
+  <img src="img/drafts.jpg" alt="カルテの画面。今日の記事の下に、話した指示から作られた注射のオーダーの下書きと、黄色の確認が並ぶ" width="1440" height="900">
+  <img class="sub" src="img/map.jpg" alt="病棟マップ。部屋とベッドの見取り図に、患者・空床・入院予定が並ぶ" width="1440" height="900">
+  <figcaption>画面の患者はすべて架空です。</figcaption>
+ </figure>
+</div></section>
+
+<section class="sec gray" id="point" style="padding-top:20px"><div class="wrap">
+ <p class="label">POINT</p>
+ <h2>3つの特長</h2>
+ <div class="points">
+  <div class="point"><span class="no">POINT 01</span><h3>話した指示が、<br>オーダーの下書きに</h3><p>「VCM 1g 12時間ごと、生食100に溶いて1時間で、今日の18時から」と話す（打つ）と、AIが薬・量・回数・時刻に分けて下書きにします。点滴の速さや時刻の計算、重複・併用注意の確認はプログラムが行い、あいまいなところは選択肢つきで聞き返します。確定するのは医師です。</p></div>
+  <div class="point"><span class="no">POINT 02</span><h3>13の職種が、<br>同じ記録を自分の画面で</h3><p>医師が確定した指示は、看護師のワークシートの「指示受け」に並び、薬剤部の監査、検査室の受付、医事課の算定へつながります。職種ごとに、最初に開く画面と、確定できる操作が決まっています。</p></div>
+  <div class="point red"><span class="no">POINT 03</span><h3>医師が病院で働きながら、<br>院に合わせて直す</h3><p>開発者の医師が非常勤として病院に勤務し、診療をしながら、医師・看護師・医事課の皆さまの使い方を見て直します。全院で同じ作りにするのではなく、院のやり方に合わせます。</p></div>
+ </div>
+ <ul class="roles" aria-label="使う職種">
+  <li>医師</li><li>看護師</li><li>薬剤師</li><li>臨床検査技師</li><li>診療放射線技師</li><li>療法士（PT・OT・ST）</li><li>管理栄養士</li><li>MSW</li><li>医事課</li><li>医師事務作業補助者</li><li>臨床工学技士</li><li>ICT</li><li>歯科衛生士</li>
+ </ul>
+</div></section>
+
+<section class="sec" id="feature"><div class="wrap">
+ <p class="label">FEATURES</p>
+ <h2>カルテでできること</h2>
+ <p class="intro">いま動いている機能です。画面に出る患者・病院・職員・院内の取り決めは、すべて架空のデータです。</p>
+ <div class="feat">
+  <div class="f"><b>話した指示から、オーダーの下書き</b><p>記事に指示を話す（打つ）と、AIが項目に分けて院内のマスターの番号を当てます。量・速さ・時刻の計算と、重複・併用注意・配合の確認はプログラムが行い、血中濃度を測る時刻も投与の開始と間隔から出します。決めるのは医師です。</p></div>
+  <div class="f"><b>看護師のワークシートと指示受け</b><p>勤務帯ごとに、注射・内服・処置・採血を時刻順に、点滴・酸素・留置は「勤務のあいだ続くもの」に並べ、A4横で印刷できます。新しい指示と中止は「指示受け」に出て、1件ずつ受けると時刻が残ります。点滴・酸素・尿道カテーテルの見回りも記録できます。</p></div>
+  <div class="f"><b>病棟マップとベッド</b><p>部屋とベッドの見取り図に、患者・空床・入院予定を並べます。入院の申し込みから空いたベッドを決め、転床はカードを空床へ動かします。「採血・血圧測定禁」などのベッドの注意事項も出せます。</p></div>
+  <div class="f"><b>申し送り（I-PASS）</b><p>最新のバイタル、12時間の指示、結果待ちの培養は、カルテから集めます。送る人が話した内容は、AIが「患者の要約・やること・もし〜なら」の欄に分けます。重症度は人が選び、受けた人が復唱して受けます。</p></div>
+  <div class="f"><b>入院時の評価と計画書の期限</b><p>入院診療計画書・栄養管理計画書・褥瘡・転倒転落・せん妄・退院支援の期限を、入院日から数えて患者ごとの表に出します。</p></div>
+  <div class="f"><b>薬剤部</b><p>処方監査（同じ成分の重複・併用禁忌・併用注意）、疑義照会、持参薬鑑別、注射の払出とラベル、抗がん剤の監査と調製、退院時の薬の説明書と薬袋。</p></div>
+  <div class="f"><b>検査室</b><p>採血のラベルをバーコードで読んで検体を受け付け、結果を入れると基準範囲の外とパニック値に印が付きます。結果を出す前に、別の技師が承認する形にもできます。</p></div>
+  <div class="f"><b>入院の算定とレセプトの点検</b><p>出来高・DPC の算定、公費、レセプトのファイルの作成と点検、返戻・査定の取り込み、総括表、未収金の台帳までを、同じカルテの中に作っています。いまは架空の記録で確かめている段階です。オンライン請求への送信は、医事課が請求端末で行います。</p></div>
+  <div class="f"><b>スマートフォンで「見る→記録する」</b><p>病棟の看護師と医師が、スマートフォン1台で受け持ちの患者を見て、記録まで済ませる専用の画面があります。</p></div>
+  <div class="f"><b>救急外来・透析室・ICU</b><p>救急隊からの受け入れの連絡、透析の条件と除水の計算、ICU・HCU の記録も、同じカルテにつながっています。</p></div>
+  <div class="f"><b>練習用の院</b><p>本番と同じ画面の練習の場です。記録は本番に入らず、メールや外部への送信は止まります。導入前の練習や、新しく来た職員の練習に使えます。</p></div>
+  <div class="f"><b>非常時に読むだけで使う画面</b><p>院内の登録した端末が、記録の写しを暗号化して持ちます。サーバーが使えないときは、職員番号と非常時のPINで、読むだけの画面から記録を見られます。誰が見たかも記録します。</p></div>
+  <div class="f"><b>データの書き出し</b><p>院の記録は、FHIR R4（JP Core）とCSVで書き出せます。</p></div>
+  <div class="f"><b>電子処方箋・オンライン資格確認</b><p>接続の検証を進めています（準備中）。</p></div>
+ </div>
+</div></section>
+
+<section class="sec gray" id="screen"><div class="wrap">
+ <p class="label">SCREEN</p>
+ <h2>実際の画面</h2>
+ <p class="intro">画面の左上の「SimpleKarte」は開発中の名前です。患者・病院・職員はすべて架空です。</p>
+ <div class="shots">
+  <figure class="wide"><img src="img/drafts.jpg" alt="カルテの画面。左に経過、中央に今日の記事と、話した指示から作られたオーダーの下書き、右にオーダーの道具" width="1440" height="900" loading="lazy"><figcaption><b>カルテと下書き</b>話した指示が下書きになり、計算と確認（黄色）が並びます。</figcaption></figure>
+  <figure><img src="img/worksheet.jpg" alt="看護師のワークシート。指示の変更と指示受け、勤務のあいだ続く点滴・酸素・留置と見回りの時刻" width="1440" height="900" loading="lazy"><figcaption><b>ワークシート</b>指示受けと、点滴・酸素の見回り。</figcaption></figure>
+  <figure><img src="img/map.jpg" alt="病棟マップ。部屋ごとのベッドに患者・空床・入院予定、上に入院の申し込み" width="1440" height="900" loading="lazy"><figcaption><b>病棟マップ</b>空床と入院予定、ベッドの注意事項。</figcaption></figure>
+  <figure><img src="img/iji.jpg" alt="医事課の仕事の画面。保険の未登録・会計がまだの件数、外来のレセプト、公費の上限額管理票、未収金の一覧" width="1440" height="900" loading="lazy"><figcaption><b>医事課の仕事</b>保険の登録、レセプト、未収金。</figcaption></figure>
+  <figure class="phone"><img src="img/mobile.jpg" alt="スマートフォンの画面。受け持ちの患者が部屋番号・氏名・印つきで並び、下に受け持ち・やること・連絡・自分のタブ" width="780" height="1688" loading="lazy"><figcaption><b>スマートフォン</b>受け持ちの患者から記録へ。</figcaption></figure>
+ </div>
+</div></section>
+
+<section class="sec" id="dev"><div class="wrap">
+ <p class="label">CO-DEVELOPMENT</p>
+ <h2>病院の現場で、<br>一緒に作ります</h2>
+ <ol class="flow four dev-steps">
+  <li><b>話を聞く</b><span>開発者の医師が、病棟・医事課・薬剤部などの流れと、困っていることをうかがいます。</span></li>
+  <li><b>小さく始める</b><span>1つの病棟・1つの部署など、始める範囲を一緒に決めます。</span></li>
+  <li><b>一緒に確かめる</b><span>架空の記録で、院の皆さまと一緒に動かして確かめ、直します。</span></li>
+  <li><b>働きながら直す</b><span>開発者の医師が非常勤として勤務し、現場で使いながら直し続けます。</span></li>
+ </ol>
+ <div class="dev">
+  <figure><img src="../img/suzuki-yuya.jpg" alt="鈴木 雄哉（医師・合同会社鈴木医工 代表）の顔写真" width="480" height="600" loading="lazy"><figcaption><b>鈴木 雄哉</b>医師／合同会社鈴木医工 代表社員</figcaption></figure>
+  <div>
+   <p class="big">ファストカルテは、病院で働く医師が自分で作っている電子カルテです。回診のあとに、口で言えば数秒の指示を、画面で1つずつ選んで入れる手間を減らしたいと考えて作りました。</p>
+   <p>画面の並び、入力欄、文書、院内の取り決め（点滴の見回りの間隔など）を、その病院のやり方に合わせます。</p>
+   <div class="onsite"><b>開発者自身が非常勤の医師として、<span class="nw">病院で働きながら</span>直します</b><span>診療をしながら、医師・看護師・医事課の皆さまの使い方を見て、その病院に合うようにカルテを直していきます。勤務の日数や内容は、ご相談のうえで決めます。</span></div>
+   <dl class="cv">
+    <dt>2022年</dt><dd>北里大学医学部医学科 卒業、医師免許を取得</dd>
+    <dt>初期研修</dt><dd>聖路加国際病院 初期研修 修了</dd>
+    <dt>2024年〜</dt><dd>総合診療の専門研修。豊田地域医療センター、藤田医科大学岡崎医療センター 総合診療科</dd>
+    <dt>2025年</dt><dd>都立広尾病院 救急科・小児科</dd>
+    <dt>2026年〜</dt><dd>たちばな台病院 総合診療科で診療</dd>
+   </dl>
+  </div>
+ </div>
+</div></section>
+
+<section class="sec gray" id="apply-flow"><div class="wrap">
+ <p class="label">FLOW</p>
+ <h2>共同開発の流れ</h2>
+ <ol class="flow four">
+  <li><b>ご相談</b><span>病床数・病棟の種類・いまの電子カルテと医事会計・お困りのことをうかがいます。</span></li>
+  <li><b>画面をお見せする</b><span>架空の患者の画面を動かして、病棟の流れに合うかを見ていただきます。</span></li>
+  <li><b>範囲と費用を決める</b><span>始める病棟・部署と、勤務の形、費用を一緒に決めます。</span></li>
+  <li><b>架空の記録で確かめる</b><span>院の皆さまと一緒に動かして確かめてから、実際の運用に進むかを決めていただきます。</span></li>
+ </ol>
+ <p class="status"><b>大切なこと：</b>いまは、架空の患者のデータで動かして確かめている段階で、共同開発の病院を募集しています。病院での稼働の実績はまだありません。実際の患者さんの記録での運用は、架空の記録での確認と院でのご確認を経てからになります。</p>
+</div></section>
+
+<section class="sec" id="faq"><div class="wrap">
+ <p class="label">Q&amp;A</p>
+ <h2>よくある質問</h2>
+ <div class="faq">
+  <details open><summary>費用はいくらですか？</summary><p>月額50万円（税抜）が目安です。病床数・使う部署・作り込みの範囲によって変わるため、うかがってからお見積もりします。はじめは1つの病棟・1つの部署の小さな範囲から始める形を想定しています。</p></details>
+  <details><summary>すぐに本番で使えますか？</summary><p>いまは架空の患者のデータで動かして確かめている段階で、共同開発の病院を募集しています。病院での稼働の実績はまだありません。共同開発の病院で、架空の記録での確認と院でのご確認を経てから、実際の患者さんの記録での運用に進みます。</p></details>
+  <details><summary>いまの電子カルテを、すべて入れ替える必要がありますか？</summary><p>はじめから全体を入れ替える前提ではありません。どの部署・どの業務から始めるかは、院の状況とお困りのことをうかがって、一緒に決めます。</p></details>
+  <details><summary>医事会計（レセコン）はどうなりますか？</summary><p>入院の算定（出来高・DPC）、レセプトのファイルの作成と点検、返戻・査定の取り込みまで、同じカルテの中に作っています。いまは架空の記録で確かめている段階で、実際の請求に使ったことはありません。オンライン請求への送信は、医事課が請求端末で行う形です（アプリからは送りません）。いまお使いのレセコンとのつなぎ方は、院の環境をうかがってご相談します。</p></details>
+  <details><summary>AIに患者さんの記録を送りますか？</summary><p>オーダーなどの下書きを作るときに、Anthropic 社のクラウドのAIサービス（Claude の API）へ送るのは、話した（打った）文と院内のマスター（薬や検査の一覧）です。氏名・生年月日・患者IDは送りません。お薬手帳の写真は、利用者が四角で囲んだ薬の行だけを送ります。話した文の中に名前が入っていれば、そのまま送られます。重複や腎機能などの確認は、AIではなくプログラムで行います。</p></details>
+  <details><summary>停電やサーバーの障害のときはどうなりますか？</summary><p>院内の登録した端末が、記録の写しを暗号化して持ちます（15分ごとに更新し、72時間で消します）。サーバーが使えないときや、管理者が非常時を宣言したときは、職員番号と非常時のPINで入る、読むだけの画面で記録を見られます。誰が・なぜ・どの患者を見たかを記録し、戻ったあとでサーバーの監査ログに送ります。</p></details>
+  <details><summary>開発者の医師が勤務するとは、どういうことですか？</summary><p>開発者の医師（総合診療科）が非常勤の医師として院に勤務し、診療をしながら、医師・看護師・医事課の皆さまの使い方を見て、カルテを院に合わせて直していきます。勤務の日数や内容は、ご相談のうえで決めます。</p></details>
+  <details><summary>どんな病院が対象ですか？</summary><p>一般病棟・地域包括ケア病棟・回復期リハビリテーション病棟・療養病棟などをお持ちの、中小規模の病院を想定しています。</p></details>
+ </div>
+</div></section>
+
+<section class="final" id="apply"><div class="wrap">
+ <p class="label" style="justify-content:center">CONTACT</p>
+ <h2>病棟のお困りごとを、<br>まずはお聞かせください。</h2>
+ <p class="sub">共同開発のご相談は、<span class="nw">こちらのフォームから</span><span class="nw">（約1分）。</span></p>
+ <form class="ask" id="ask" novalidate>
+  <label for="f-clinic">病院名<span class="req">必須</span></label>
+  <input id="f-clinic" name="clinic" type="text" autocomplete="organization" required>
+  <label for="f-name">お名前<span class="req">必須</span></label>
+  <input id="f-name" name="name" type="text" autocomplete="name" required>
+  <label for="f-role">ご所属・役職（任意）</label>
+  <input id="f-role" name="role" type="text" autocomplete="organization-title">
+  <label for="f-email">メールアドレス<span class="req">必須</span></label>
+  <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required>
+  <fieldset><legend>病床数</legend>
+   <label class="chk"><input type="radio" name="beds" value="99床以下"><span>99床以下</span></label>
+   <label class="chk"><input type="radio" name="beds" value="100〜199床"><span>100〜199床</span></label>
+   <label class="chk"><input type="radio" name="beds" value="200床以上"><span>200床以上</span></label>
+  </fieldset>
+  <label for="f-note">お困りのこと・ご質問（任意）</label>
+  <textarea id="f-note" name="note" rows="4"></textarea>
+  <p class="ask-err" id="ask-err" hidden></p>
+  <button class="pill solid ask-btn" type="submit" id="ask-btn">相談する</button>
+  <p class="ask-note">いただいた情報は、このご相談への返信にだけ使います（<a href="../privacy.html">個人情報の取扱い</a>）。開発者の鈴木から、メールで折り返しご連絡します。</p>
+ </form>
+ <div class="ask-done" id="ask-done" hidden>
+  <p style="font-size:22px;font-weight:900;margin:0 0 8px;color:var(--main2)">ご相談を受け付けました。</p>
+  <p>ご記入のメールアドレスに、鈴木から折り返しご連絡します。</p>
+ </div>
+ <p class="alt">メールでも受け付けています：<a href="mailto:info@suzuki-medical-engineering.work">info@suzuki-medical-engineering.work</a></p>
+</div></section>
+
+<div class="fixbar"><a class="a1" href="#screen">画面を見る</a><a class="a2" href="#apply">共同開発を相談する</a></div>
+
+<script>
+(function(){
+ var F="https://docs.google.com/forms/d/e/1FAIpQLSdQ_4x4XmHqvTUb7e0QiucxPzNftxZsTb8JvPfKPsxw2QWLfQ/formResponse";
+ var form=document.getElementById("ask"),btn=document.getElementById("ask-btn"),err=document.getElementById("ask-err"),done=document.getElementById("ask-done");
+ form.addEventListener("submit",function(e){
+  e.preventDefault();
+  var c=form.clinic.value.trim(),n=form.name.value.trim(),m=form.email.value.trim();
+  var bad=[];if(!c)bad.push("病院名");if(!n)bad.push("お名前");if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m))bad.push("メールアドレス");
+  if(bad.length){err.textContent=bad.join("・")+"をご確認ください。";err.hidden=false;return;}
+  err.hidden=true;btn.disabled=true;btn.textContent="送信しています…";
+  var b=form.querySelector('input[name=beds]:checked');
+  var note="【病院・病棟向け（共同開発）の相談】\n所属・役職："+(form.role.value.trim()||"未回答")+"\n病床数："+(b?b.value:"未回答")+"\n"+form.note.value.trim();
+  var d=new FormData();d.append("entry.214546796",c);d.append("entry.1947739770",n);d.append("entry.693401418",m);d.append("entry.1022250887",note);
+  fetch(F,{method:"POST",mode:"no-cors",body:d}).then(function(){form.hidden=true;done.hidden=false;done.scrollIntoView({block:"center"});}).catch(function(){
+   btn.disabled=false;btn.textContent="相談する";err.textContent="送信できませんでした。通信状態をご確認のうえ、もう一度お試しいただくか、下のメールアドレスへご連絡ください。";err.hidden=false;});
+ });
+})();
+document.addEventListener("touchstart",function(){},{passive:true});
+</script>
+<footer><div class="wrap">合同会社鈴木医工（Suzuki Medical Engineering LLC）　© 2026 ファストカルテ　<a href="../clinic/" style="color:inherit">診療所向け（ORCA連携）はこちら</a>　<a href="../" style="color:inherit">美容・自由診療クリニック向けはこちら</a>　<a href="../privacy.html" style="color:inherit">個人情報の取扱い</a></div></footer>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b91a3af1df7548acadb3aa3fe1265307"}'></script><!-- End Cloudflare Web Analytics -->
+</body></html>
